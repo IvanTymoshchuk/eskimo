@@ -18,6 +18,8 @@
     "url": "https://github.com/IvanTymoshchuk/eskimo/issues"
   },
   "dependencies": {
+    "jquery": "^3.6.3",
+    "juery": "^1.0.0",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {

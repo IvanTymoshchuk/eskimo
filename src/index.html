@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Ice cream</title>
+
+    <!-- slick animation -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- animated css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- base link -->
     <link rel="stylesheet" href="./sass/index.scss" />
+
+    <!-- base js -->
     <script type="module" src="./index.js"></script>
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!-- <include src="./partials/example.html"></include> -->
+
+    <include src="./partials/header.html"></include>
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/products.html"></include>
+      <include src="./partials/about.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/gallery.html"></include>
+      <include src="./partials/сustomer.html"></include>
+      <include src="./partials/reviews.html"></include>
+      <include src="./partials/contacts.html"></include>
+    </main>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/backdrop.html"></include>
+
+    <!-- -------------------------------------------------------- -->
+
+    <!-- sclicj jqery -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <!-- slick js -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- base js -->
+    <script src="./js/slick.js" type="module"></script>
   </body>
 </html>

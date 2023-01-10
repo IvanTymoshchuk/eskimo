@@ -1,0 +1,25 @@
+body {
+  background-color: $bg-color-body;
+  color: $primary-text-color;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desctop {
+    width: 1200px;
+  }
+}
