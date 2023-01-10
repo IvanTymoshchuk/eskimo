@@ -1,0 +1,30 @@
+{
+  "name": "eskimo",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://IvanTymoshchuk.github.io/eskimo",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /eskimo/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanTymoshchuk/eskimo.git"
+  },
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanTymoshchuk/eskimo/issues"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
