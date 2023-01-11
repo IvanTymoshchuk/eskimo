@@ -1,0 +1,39 @@
+.advantages__numbers{
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.22;
+    
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    
+        color: #FCFCFC;
+}
+
+.advantages__numbers::before{
+    content: '';
+    // background-image: './images/advantages/cow-icon.png';
+    // background-image: './images/advantages/cow-icon-2x.png';
+    background-image: './images/advantages/cow-icon-2x.png';
+    background-image: './images/advantages/cow-icon.png';
+
+    background-repeat: no-repeat;
+    background-position: center;
+    contain: content;
+    
+}
+
+.advantages__text{
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.7;
+        
+    
+        text-align: center;
+    
+        color: #FCFCFC;
+}
