@@ -1,3 +1,5 @@
+// Р О З М І Р И
+
 @mixin mobile {
   @media screen and (min-width: 480px) {
     @content;
@@ -15,6 +17,9 @@
     @content;
   }
 }
+//
+
+// Р Е Т И Н А
 
 @mixin retina {
   @media (min-device-pixel-ratio: 2),
@@ -23,9 +28,38 @@
     @content;
   }
 }
+//
+
+// Ф Л Е К С И
 
 @mixin centerFlex() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+//
+
+//  А Н І М А Ц І Я
+
+@mixin transition($type) {
+  transition: $type 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionX2($type1, $type2) {
+  transition: $type1 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type2 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionX3($type1, $type2, $type3) {
+  transition: $type1 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type2 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type3 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionX4($type1, $type2, $type3, $type4) {
+  transition: $type1 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type2 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type3 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type4 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+//
