@@ -121,6 +121,10 @@ textarea {
   @media screen and(max-width:479px) {
     width: 100%;
   }
+
+  @include desktop {
+    width: 100px;
+  }
 }
 
 .form-modal {
