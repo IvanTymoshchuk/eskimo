@@ -141,12 +141,12 @@ textarea {
 
   @include tablet {
     width: 368px;
-    height: 42px;
+    height: 84px;
   }
 
   @include desktop {
     width: 368px;
-    height: 42px;
+    height: 84px;
   }
 }
 
@@ -175,6 +175,8 @@ textarea {
 // }
 
 .form-paragraf {
+  width: 222px;
+  height: 240px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
