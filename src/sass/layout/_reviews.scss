@@ -1,0 +1,52 @@
+.review {
+  background-image: url(../images/bg-ice/bg_desktop.png);
+  background-color: $inverse-color;
+  height: 1053px;
+  margin-right: auto;
+}
+.one-time {
+}
+.review__img {
+  margin: 0 auto 140px;
+}
+
+.review__customer_img {
+  margin: 0 auto 32px;
+}
+
+.review__content {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $fill-icon;
+  background-color: $bg-color-body;
+  padding: 42px 80px;
+  border-radius: 24px;
+  width: 968px;
+  // margin: 0 93px;
+  // height: 54px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.review__paragraph {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  text-align: center;
+  color: $primary-text-color;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $bg-color-body;
+}
+.slick-dots li button:before {
+  color: $nonactive-slide-button-color;
+  width: 12px;
+  height: 12px;
+}
