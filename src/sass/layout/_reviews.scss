@@ -4,31 +4,66 @@
   height: 1053px;
   margin-right: auto;
 }
-.one-time {
-}
+// .one-time {
+// }
 
 .review__customer_img {
-  margin: 140px auto 32px;
+  padding: 55% 0 0;
+  margin: 0px auto 32px;
+    @media screen and (min-width: 480px) {
+        padding: 257px 0 0;
+      }
+    
+      @media screen and (min-width: 768px) {
+        padding: 283px 0 0;
+      }
+    
+      @media screen and (min-width: 1200px) {
+        padding: 464px 0 0;
+      }
 }
 
 .review__content {
-  @include font(500, null, 1.86, 0.04);
+  @include font(400, 12, 2.55, null);
   text-align: center;
   color: $fill-icon;
   background-color: $bg-color-body;
-  padding: 42px 80px;
-  border-radius: 24px;
-  width: 968px;
+  padding: 35px 39px;
+  border-radius: 10px;
+  width: calc(100% - 40px);
   // margin: 0 93px;
   // height: 54px;
   margin: 0 auto;
   margin-bottom: 32px;
+
+    @media screen and (min-width: 480px) {
+      padding: 35px 39px;
+      width: 280px;
+      }
+
+    @media screen and (min-width: 768px) {
+      @include font(500, 14, 1.86, 0.04);
+      padding: 42px 80px;
+      border-radius: 24px;
+      width: 705px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      @include font(500, 16, 1.86, 0.04);
+      padding: 42px 80px;
+      width: 968px;
+    }
+
 }
 .review__paragraph {
   @include font(500, null, 1.86, 0.04);
   text-align: center;
   color: $primary-text-color;
   margin-bottom: 32px;
+}
+
+.slick-dots {
+  width: calc(100% - 40px);
 }
 
 .slick-dots li.slick-active button:before {
