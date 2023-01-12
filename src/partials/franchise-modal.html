@@ -1,0 +1,85 @@
+<!-- Элементы для вызова модальных окон, могут быть любые -->
+
+<div class="modal" data-modal="2">
+  <!--   Svg иконка для закрытия окна  -->
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+
+  <form class="form-modal">
+    <div class="form-field">
+      <h2 class="form-franchise__title">
+        Thank you for your interest in owning an Ice Cream shop
+      </h2>
+      <p class="form-paragraf">
+        Due to the overwhelming volume of franchise requests we are not
+        accepting new franchisee applications at this time. Once the application
+        process resumes, we will contact you for further information. Please
+        fill out the contact information below and we will reach out for
+        additional information. We appreciate your patience.
+      </p>
+      <label class="form-lable" for="name"> </label>
+      <div class="form-input">
+        <input
+          class="form-input__name"
+          placeholder="Name"
+          type="text"
+          name="name"
+          id="name"
+        />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label class="form-lable" for="tel"></label>
+      <div class="form-input">
+        <input
+          class="form-input__name"
+          placeholder="Phone"
+          type="tel"
+          name="tel"
+          id="tel"
+          pattern="\+3\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+        />
+      </div>
+    </div>
+    <div class="form-field">
+      <label class="form-lable" for="mail"></label>
+      <div class="form-input">
+        <input
+          class="form-input__name"
+          placeholder="Email"
+          type="email"
+          name="mail"
+          id="mail"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+      </div>
+    </div>
+    <div class="form-field coments-franchise">
+      <label class="form-lable" for="comment"></label>
+      <div class="form-textarea">
+        <textarea
+          name="comment"
+          id="comment"
+          rows="20"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+    </div>
+
+    <button class="form-button" type="submit">Submit</button>
+  </form>
+
+  <!-- form franchise -->
+</div>
+
+<!-- Подложка под модальным окном -->
+
+<div class="overlay js-overlay-modal"></div>
