@@ -90,7 +90,7 @@ a {
   display: inline-block;
   text-decoration: none;
   margin: 10px;
-  color: #fff;
+  color: $primary-white-color;
   border-radius: 3px;
 }
 
@@ -108,7 +108,7 @@ a {
 
   margin-bottom: 20px;
 
-  color: #131313;
+  color: $primary-text-color;
 
   @include tablet {
     margin-bottom: 25px;
@@ -128,9 +128,9 @@ textarea {
 
   outline: none;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $bg-color-body;
   border-radius: 10px;
-  transition-property: ffffff;
+  transition-property: $inverse-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -149,7 +149,8 @@ textarea {
 
 .form-modal {
   width: 100%;
-  background: #fcfcfc;
+  height: 100%;
+  background: $primary-white-color;
   border: 2px solid #f8d24e;
   border-radius: 10px;
   padding: 40px;
@@ -178,7 +179,7 @@ textarea {
   line-height: 20px;
   text-align: left;
   margin-bottom: 24px;
-  color: #131313;
+  color: $primary-text-color;
 
   @include mobile {
     margin-bottom: 24px;
@@ -202,7 +203,7 @@ textarea {
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: black;
+  color: $primary-text-color;
 }
 
 .form-lable {
@@ -220,7 +221,7 @@ textarea {
   height: 32px;
   padding-left: 12px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $bg-color-body;
   border-radius: 10px;
   transition-property: gray;
   transition-duration: 250ms;
@@ -269,7 +270,7 @@ textarea {
 
 .form-input__name:focus {
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $bg-color-body;
   border-radius: 10px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -283,7 +284,7 @@ textarea {
 
 textarea:focus {
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid $bg-color-body;
   border-radius: 10px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -301,8 +302,8 @@ textarea:focus {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  color: black;
-  background: green;
+  color: $primary-text-color;
+  background: $bg-color-body;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: hidden;
@@ -319,8 +320,8 @@ textarea:focus {
 
 .form-button:hover,
 .form-button:focus {
-  background: black;
-  color: green;
+  background: $primary-text-color;
+  color: $bg-color-body;
   transition-property: backround-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -373,8 +374,8 @@ textarea:focus {
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  color: #131313;
-  background: #f8d24e;
+  color: $primary-text-color;
+  background: $bg-color-button;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -388,8 +389,8 @@ textarea:focus {
 
 .form-button:hover,
 .form-button:focus {
-  background: black;
-  color: green;
+  background: $primary-text-color;
+  color: $bg-color-body;
   transition-property: backround-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
