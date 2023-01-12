@@ -6,10 +6,8 @@ body {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin: 0 auto;
+  padding: 0 20px;
 
   @include mobile {
     width: 480px;
@@ -17,9 +15,11 @@ body {
 
   @include tablet {
     width: 768px;
+    padding: 0 32px;
   }
 
   @include desktop {
     width: 1200px;
+    padding: 0 16px;
   }
 }

@@ -1,35 +1,76 @@
-.contacts__container {
-  // width: 100%;
+.contacts {
+  padding-bottom: 60px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-bottom: 120px;
+  }
+}
 
+.contacts__container {
   position: relative;
-  max-height: 636px;
-  transform: translateY(-125px);
+  max-height: 1081px;
+  transform: translateY(-349px);
   z-index: 1;
+  @include tablet {
+    max-height: 333px;
+    transform: translateY(-299px);
+  }
+
+  @include desktop {
+    max-height: 530px;
+    transform: translateY(-128px);
+  }
 }
 
 .contacts__card {
-  max-width: 368px;
-  // height: 542px;
-  background-color: #ffffff;
-  padding: 40px;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  max-width: 280px;
+  padding: 40px 32px 24px;
   border-radius: 24px;
+  background-color: $inverse-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  @include tablet {
+    max-width: 224px;
+    padding: 40px 24px;
+  }
+
+  @include desktop {
+    max-width: 368px;
+    padding: 40px;
+  }
 }
 
 .contacts__list-card {
   display: flex;
-  gap: 0 32px;
-  margin-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 0;
+  margin-bottom: 24px;
+  @include tablet {
+    flex-direction: row;
+    gap: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    gap: 0 32px;
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__list-card:hover .contacts__item-card {
-  // opacity: .8;
+  // opacity: .9;
   transform: scale(1);
 }
 
 .contacts__list-card:hover .contacts__item-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
   // opacity: 1;
+  @include tablet {
+    transform: scale(1.1);
+  }
 }
 
 .contacts__item-card {
@@ -38,87 +79,150 @@
 
 .contacts__name {
   width: fit-content;
-  margin-bottom: 32px;
-  padding: 4px 14px;
-  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 4px 22px;
+  border-radius: 4px;
   font-weight: 500;
-  line-height: 1.375;
-  /* or 140% */
+  font-size: 12px;
+  line-height: 120%;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #131313;
-  background-color: #f8d24e;
+  color: $primary-text-color;
+  background-color: $bg-color-button;
+
+  @include tablet {
+    margin-bottom: 32px;
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 
 .address,
 .contacts__list-week {
   border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .address__town {
   margin-bottom: 8px;
+  @include tablet {
+    margin-bottom: 12px;
+  }
+  @include desktop {
+    margin-bottom: 8px;
+  }
 }
 
 .address__town,
 .contacts__days-week {
   font-style: normal;
   font-weight: 500;
-  line-height: 1.875;
-  /* or 186% */
+  font-size: 12px;
+  line-height: 186%;
   letter-spacing: 0.04em;
-  color: #131313;
+  color: $primary-text-color;
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .address__link {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.8125;
-  /* or 183% */
+  font-size: 12px;
+  line-height: 183%;
   letter-spacing: 0.04em;
-  color: #d6936d;
-  &:hover,
-  &:focus {
-    text-decoration: underline;
+  color: $focus-color-text;
+
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
 .contacts__days-week {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 12px;
+  }
 }
 
 .contacts__time-week {
   display: block;
   font-weight: 500;
-  line-height: 1.875;
-  /* or 186% */
-  color: #ababab;
+  font-size: 12px;
+  line-height: 186%;
+  color: $color-button-disable;
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts__item-weekend {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__item-join:not(:last-child) {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  @include tablet {
+    margin-bottom: 4px;
+  }
 }
 
 .contacts__link-join {
   font-weight: 500;
-  line-height: 1.5;
-  /* or 150% */
-  color: #131313;
+  font-size: 12px;
+  line-height: 160%;
+  color: $primary-text-color;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 // КНОПКИ
 
 .contacts__buttons {
   display: flex;
-  margin: 0 auto;
-  gap: 0 16px;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 16px 0;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 0 16px;
+  }
 }
 
 .contacts__btn {
@@ -129,50 +233,50 @@
 
   font-weight: 600;
   font-size: 14px;
-  line-height: 1.2857;
-  /* identical to box height, or 129% */
+  line-height: 129%;
 
-  color: #131313;
+  color: $primary-text-color;
 }
 
 .btn-locations {
   padding: 12px 40px;
   border: 2px solid transparent;
-  background-color: #f8d24e;
+  background-color: $bg-color-button;
 
   border-radius: 10px;
-  //   font-family: inherit;
-  @include transitionX2(background-color, color);
+  @include transitionX3(background-color, color, fill);
 
   &:hover {
     background-color: #0a8817;
   }
   &:focus {
     background-color: #0a8817;
-    color: #ffffff;
+    color: $inverse-color;
+    fill: $inverse-color;
   }
   &:disabled {
-    background-color: #ababab;
+    background-color: $color-button-disable;
   }
 }
 
 .btn-franchise {
   border-radius: 10px;
   padding: 12px 55px;
-  border: 2px solid #f8d24e;
+  border: 2px solid $bg-color-button;
 
   background-color: transparent;
-  @include transitionX2(border, color);
+  @include transitionX3(border, color, fill);
 
   &:hover {
     border: 2px solid #0a8817;
   }
   &:focus {
     border: 2px solid #0a8817;
-    color: #ffffff;
+    color: $inverse-color;
+    fill: $inverse-color;
   }
   &:disabled {
-    border: 2px solid #ababab;
+    border: 2px solid $color-button-disable;
   }
 }
 
