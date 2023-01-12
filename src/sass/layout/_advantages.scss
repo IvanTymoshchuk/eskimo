@@ -14,22 +14,16 @@
 
 .advantages__numbers::before{
     content: '';
+    display: inline-block;
     width: 40px;
     height: 40px;
-    // background-image: './images/advantages/cow-icon.png';
-    // background-image: './images/advantages/cow-icon-2x.png';
-    // background-image: './images/advantages/cow-icon-2x.png';
-    // background-image: './images/advantages/cow-icon.png';
-    background-image: url(../images/advantages/cow-icon.png);
-    
+   background-image: url(../images/advantages/cow-icon.png);
     fill: black;
 
     background-repeat: no-repeat;
     background-position: center;
     contain: content;
-    // background-repeat: no-repeat;
-    //     background-size: cover;
-    //     background-position: center;
+    
     
 }
 
@@ -45,3 +39,5 @@
     
         color: #FCFCFC;
 }
+
+
