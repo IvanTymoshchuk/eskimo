@@ -6,22 +6,14 @@
 }
 .one-time {
 }
-.review__img {
-  margin: 0 auto 140px;
-}
 
 .review__customer_img {
-  margin: 0 auto 32px;
+  margin: 140px auto 32px;
 }
 
 .review__content {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.86;
+  @include font(500, null, 1.86, 0.04);
   text-align: center;
-  letter-spacing: 0.04em;
   color: $fill-icon;
   background-color: $bg-color-body;
   padding: 42px 80px;
@@ -33,13 +25,10 @@
   margin-bottom: 32px;
 }
 .review__paragraph {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.86;
+  @include font(500, null, 1.86, 0.04);
   text-align: center;
   color: $primary-text-color;
+  margin-bottom: 32px;
 }
 
 .slick-dots li.slick-active button:before {
