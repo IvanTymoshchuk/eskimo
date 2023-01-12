@@ -2,20 +2,20 @@
     padding: 0 20px;
     margin: 0 auto;
     max-width: 480px;
-@media screen and (min-width:768px) {
-    padding: 0 32px;
-    max-width: 768px;
-    }
+    @media screen and (min-width:768px) {
+        padding: 0 32px;
+        max-width: 768px;
+        }
     @media screen and (min-width:1200px) {
         padding: 0 16px;
         max-width: 1200px;
     }
 }
 .hero{
-        position: relative;
-        @media screen and (min-width:768px) {
-            display: flex;
-        }
+    position: relative;
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
 
 }
 .hero__wrapper{
@@ -68,9 +68,7 @@
     background: none;
     color: #000000;
     border: 2px solid $bg-color-button;
-    
     @media screen and (min-width:1200px) {
-        margin-bottom: 53px;
         font-size: 14px;
         line-height: 18px;
         padding: 12px 34px;
