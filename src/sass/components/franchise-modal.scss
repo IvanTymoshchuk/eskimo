@@ -1,0 +1,369 @@
+/* Стили для подложки */
+
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  background: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  transition: 0.3s all;
+  padding: 40px;
+
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 568px;
+  }
+
+  @include desktop {
+    width: 568px;
+    height: 668px;
+  }
+}
+
+/* Стили для активных классов подложки и окна */
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+
+  @include tablet {
+    width: 568px;
+    height: 668px;
+  }
+
+  @include desktop {
+    width: 568px;
+    height: 668px;
+  }
+}
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+
+a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px;
+  color: $primary-white-color;
+  border-radius: 3px;
+}
+
+/* -------------- madal form -------------- */
+
+.form-franchise__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  color: $primary-text-color;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 64px;
+  padding: 8px;
+
+  outline: none;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $bg-color-body;
+  border-radius: 10px;
+  transition-property: $inverse-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mobile {
+    max-width: 100%;
+  }
+
+  @include tablet {
+    width: 368px;
+    height: 84px;
+  }
+
+  @include desktop {
+    width: 368px;
+    height: 84px;
+  }
+}
+
+// .form-modal {
+//   width: 100%;
+
+//   background: $primary-white-color;
+//   border: 2px solid #f8d24e;
+//   border-radius: 10px;
+//   padding: 40px;
+
+//   @include mobile {
+//     width: 480px;
+//     margin: 0 20px;
+//   }
+
+//   @include tablet {
+//     width: 568px;
+//     height: 668px;
+//   }
+
+//   @include desktop {
+//     width: 568px;
+//     height: 668px;
+//   }
+// }
+
+.form-paragraf {
+  width: 222px;
+  height: 240px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 24px;
+  color: $primary-text-color;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: $primary-text-color;
+}
+
+.form-input {
+  position: relative;
+  display: inline;
+  margin-bottom: 12px;
+}
+
+.form-input__name {
+  width: 100%;
+  height: 32px;
+  padding-left: 12px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $bg-color-body;
+  border-radius: 10px;
+  transition-property: gray;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+
+  @include tablet {
+    width: 368px;
+    height: 42px;
+  }
+
+  @include desktop {
+    width: 368px;
+    height: 42px;
+  }
+}
+
+.form-input__name:focus {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $bg-color-body;
+  border-radius: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input__name:focus ~ .form-name__icon {
+  fill: gray;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:focus {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $bg-color-body;
+  border-radius: 10px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: $primary-text-color;
+  background: $bg-color-body;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition-property: backround-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and(max-width:479px) {
+    margin-left: 0;
+  }
+}
+
+.form-button:hover,
+.form-button:focus {
+  background: $primary-text-color;
+  color: $bg-color-body;
+  transition-property: backround-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+
+  @media screen and(max-width:479px) {
+    line-height: 12px;
+  }
+}
+
+.coments-franchise {
+  margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 42px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: $primary-text-color;
+  background: $bg-color-button;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition-property: backround-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+  background: $primary-text-color;
+  color: $bg-color-body;
+  transition-property: backround-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
