@@ -1,1 +1,0 @@
-{"mappings":"AAAAA,EAAE,SAASC,MAAM,CACfC,MAAM,EACNC,UAAU,EACVC,MAAO,IACPC,MAAM,EACNC,QAAS","sources":["src/js/slick.js"],"sourcesContent":["$('.fade').slick({\n  dots: true,\n  infinite: true,\n  speed: 500,\n  fade: true,\n  cssEase: 'linear'\n});\n\t"],"names":["$","slick","dots","infinite","speed","fade","cssEase"],"version":3,"file":"index.db2c8b19.js.map"}
