@@ -5,7 +5,8 @@ h4,
 h5,
 h6,
 p {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -18,4 +19,17 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
 }
