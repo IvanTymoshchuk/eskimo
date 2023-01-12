@@ -18,19 +18,16 @@
 /* Стили для модальных окон */
 
 .modal {
-  /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
   width: 100%;
 
-  /*  Центрируем и задаем z-index */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
+  z-index: 30;
 
-  /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
 
@@ -39,19 +36,19 @@
   border-radius: 10px;
   transition: 0.3s all;
 
-  @media screen and(min-width:480px) {
-    width: 568px;
-    height: 668px;
+  @include mobile {
+    width: 480px;
+    padding: 0 32px;
   }
 
-  @media screen and(min-width:1199px) {
+  @include tablet {
     width: 568px;
-    height: 668px;
   }
 
-  @media screen and(min-width:1200px) {
+  @include desktop {
     width: 568px;
     height: 668px;
+    padding: 0 16px;
   }
 }
 
@@ -61,6 +58,17 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
+
+  @include tablet {
+    width: 568px;
+    height: 668px;
+  }
+
+  @include desktop {
+    width: 568px;
+    height: 668px;
+    padding: 0 16px;
+  }
 }
 
 /* Стили для кнопки закрытия */
@@ -101,6 +109,14 @@ a {
   margin-bottom: 20px;
 
   color: #131313;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
 }
 
 textarea {
@@ -118,12 +134,16 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and(max-width:479px) {
-    width: 100%;
+  @include mobile {
+    max-width: 100%;
+  }
+
+  @include tablet {
+    max-width: 100%;
   }
 
   @include desktop {
-    width: 100px;
+    max-width: 100%;
   }
 }
 
@@ -134,7 +154,17 @@ textarea {
   border-radius: 10px;
   padding: 40px;
 
-  @media screen and(min-width:1200px) {
+  @include mobile {
+    width: 480px;
+    margin: 0 20;
+  }
+
+  @include tablet {
+    width: 568px;
+    height: 668px;
+  }
+
+  @include desktop {
     width: 568px;
     height: 668px;
   }
@@ -150,11 +180,17 @@ textarea {
   margin-bottom: 24px;
   color: #131313;
 
-  //   @media screen and(max-width:479px) {
-  //     margin-left: 0;
-  //     font-size: 10px;
-  //     text-align: left;
-  //   }
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
 }
 
 .form-field {
@@ -170,12 +206,13 @@ textarea {
 }
 
 .form-lable {
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .form-input {
   position: relative;
   display: inline;
+  margin-bottom: 12px;
 }
 
 .form-input__name {
@@ -190,44 +227,44 @@ textarea {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 
-  //   @media screen and(max-width:767px) {
-  //     width: 100%;
-  //     height: 40px;
-  //     padding-left: 30px;
-  //     border: 1px solid rgba(33, 33, 33, 0.2);
-  //     border-radius: 4px;
-  //     transition-property: gray;
-  //     transition-duration: 250ms;
-  //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  //     outline: none;
-  //   }
+  // @media screen and(min-width:480px) {
+  //   width: 100%;
+  //   height: 40px;
+  //   padding-left: 30px;
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  //   transition-property: gray;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   outline: none;
+  // }
 
-  //   @media screen and(min-width:1200px) {
-  //     width: 100%;
-  //     height: 40px;
-  //     padding-left: 30px;
-  //     border: 1px solid rgba(33, 33, 33, 0.2);
-  //     border-radius: 4px;
-  //     transition-property: gray;
-  //     transition-duration: 250ms;
-  //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  //     outline: none;
-  //   }
+  // @media screen and(min-width:1200px) {
+  //   width: 100%;
+  //   height: 40px;
+  //   padding-left: 30px;
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  //   transition-property: gray;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   outline: none;
+  // }
 
-  //   @media screen and(min-width:767px) {
-  //     width: 100%;
-  //     height: 40px;
-  //     padding-left: 30px;
-  //     border: 1px solid rgba(33, 33, 33, 0.2);
-  //     border-radius: 4px;
-  //     transition-property: gray;
-  //     transition-duration: 250ms;
-  //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  //     outline: none;
-  //   }
-  //   @media screen and(max-width:479px) {
-  //     width: 100%;
-  //   }
+  // @media screen and(min-width:767px) {
+  //   width: 100%;
+  //   height: 40px;
+  //   padding-left: 30px;
+  //   border: 1px solid rgba(33, 33, 33, 0.2);
+  //   border-radius: 4px;
+  //   transition-property: gray;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   outline: none;
+  // }
+  // @media screen and(max-width:479px) {
+  //   width: 100%;
+  // }
 }
 
 .form-input__name:focus {
@@ -242,19 +279,6 @@ textarea {
   fill: gray;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-name__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  transition-property: green;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
 }
 
 textarea:focus {
@@ -320,26 +344,20 @@ textarea:focus {
   }
 }
 
-.form-checkbox__icon {
-  display: inline-block;
-  padding-top: 2px;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  align-items: center;
-  border: 2px solid black;
-  border-radius: 4px;
-  fill: currentColor;
-
-  @media screen and(max-width:479px) {
-    width: 12px;
-    height: 11px;
-    margin-right: 1px;
-  }
-}
-
-.coments {
+.coments-franchise {
   margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
 }
 
 .form-button {
