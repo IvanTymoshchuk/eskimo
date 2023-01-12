@@ -1,5 +1,16 @@
+.advantages__section{
+    padding-top: 50px;
+    padding-bottom: 32px;
+    
+
+}
 .advantages__item{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .advantages__item::before{
