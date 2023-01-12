@@ -52,7 +52,12 @@
         }
 }
 .hero__btn-list{
-    
+    @media screen and (min-width:768px) {
+            margin-bottom: 18px;
+        }
+        @media screen and (min-width:1200px) {
+            margin-bottom: 53px;
+        }
 }
 .hero__btn-product{
     font-weight: 600;
@@ -63,9 +68,7 @@
     background: none;
     color: #000000;
     border: 2px solid $bg-color-button;
-    @media screen and (min-width:768px) {
-            margin-bottom: 18px;
-        }
+    
     @media screen and (min-width:1200px) {
         margin-bottom: 53px;
         font-size: 14px;
