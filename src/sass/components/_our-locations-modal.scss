@@ -1,21 +1,21 @@
  
-.modal__map-link{
+.modal__map-btn{
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 1.21;
-
+min-width:145px;
 display: inline-block;
 padding: 12px 24px;
 margin-top: 32px;
-background: #f8d24e;
+background: $bg-color-button;
 border-radius: 10px;
 border: none;
 align-items: center;
 text-align: center;
 text-decoration: none;
-color: #131313;
+color: $primary-text-color;
 }
 
 .modal__map{
@@ -23,4 +23,5 @@ color: #131313;
     height: 205px;
     margin-bottom: 32px;
     border-radius: 10px;
+    
 }
