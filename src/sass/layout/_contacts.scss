@@ -42,20 +42,17 @@
 }
 
 .contacts__list-card {
-  display: flex;
+  @include centerFlex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px 0;
+  gap: 16px;
   margin-bottom: 24px;
   @include tablet {
     flex-direction: row;
-    gap: 0 16px;
     margin-bottom: 40px;
   }
 
   @include desktop {
-    gap: 0 32px;
+    gap: 32px;
     margin-bottom: 60px;
   }
 }
@@ -82,11 +79,8 @@
   margin-bottom: 20px;
   padding: 4px 22px;
   border-radius: 4px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 120%;
+  @include font(500, 12, 120%, 0.04);
   text-align: center;
-  letter-spacing: 0.04em;
   color: $primary-text-color;
   background-color: $bg-color-button;
 
@@ -122,10 +116,7 @@
 .address__town,
 .contacts__days-week {
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 186%;
-  letter-spacing: 0.04em;
+  @include font(500, 12, 186%, 0.04);
   color: $primary-text-color;
 
   @include tablet {
@@ -140,10 +131,7 @@
   display: block;
   margin-bottom: 24px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 183%;
-  letter-spacing: 0.04em;
+  @include font(500, 12, 183%, 0.04);
   color: $focus-color-text;
 
   @include tablet {
@@ -213,9 +201,7 @@
 // КНОПКИ
 
 .contacts__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex;
   flex-direction: column;
   gap: 16px 0;
 
@@ -226,11 +212,8 @@
 }
 
 .contacts__btn {
-  display: flex;
-  align-items: center;
+  @include centerFlex;
   text-align: center;
-  justify-content: center;
-
   font-weight: 600;
   font-size: 14px;
   line-height: 129%;
