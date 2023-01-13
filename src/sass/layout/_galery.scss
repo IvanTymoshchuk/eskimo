@@ -19,15 +19,15 @@
 
 .gallery {
   height: 35px;
-  @media screen and (min-width: 480px) {
+ @include mobile {
     height: 28px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     height: 144px;
   }
 
-  @media screen and (min-width: 1200px) {
+   @include desktop {
     height: 98px;
   }
 }
@@ -54,11 +54,11 @@
   width: 100%;
   position: absolute;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 704px;
   }
 
-  @media screen and (min-width: 1200px) {
+   @include desktop  {
     width: 1013px;
   }
 }
@@ -67,15 +67,15 @@
   width: 100%;
   height: 100%;
 
-  @media screen and (min-width: 480px) {
+   @include mobile  {
     height: 204px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     height: 327px;
   }
 
-  @media screen and (min-width: 1200px) {
+   @include desktop {
     height: 422px;
   }
 }
