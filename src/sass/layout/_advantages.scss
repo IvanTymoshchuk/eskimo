@@ -38,23 +38,12 @@
     margin-bottom: 0px;
     }
          @include tablet {
-            // margin-right: 80px;
+            
             margin-bottom: 0px;
-            // &:last-child {
-            //         margin-right: 0px;
-            //     }
+            
                 gap: 0px;
          }
-//         @include desktop {
-//     margin-right: 32px;
 
-
-//     &:last-child {
-//         margin-right: 0px;
-//     }
-
-//     gap: 0px;
-// }
 
 }
 
@@ -83,6 +72,18 @@ content: '';
 }
 .advantages__item-cow::before{
 background-image: url(../images/advantages/cow-icon.png);
+
+
+ @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/advantages/cow-icon-2x.png);
+    }
+
+
+
 }
 
 .advantages__item-kg::before {
