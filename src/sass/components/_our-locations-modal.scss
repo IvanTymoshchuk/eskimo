@@ -2,6 +2,11 @@
   @include mobile {
     width: 100%;
   }
+
+  @media screen and (max-width: 768px) and (min-width: 480px){
+    height: 449px;
+  }
+
   @include tablet {
     width: 568px;
     height: 449px;
@@ -25,6 +30,11 @@
   text-align: center;
   text-decoration: none;
   color: $primary-text-color;
+
+  @media screen and (max-width: 480px) {
+      
+    margin-top: 24px;
+  }
 }
 
 .modal__map {
@@ -32,4 +42,13 @@
   height: 205px;
   margin-bottom: 32px;
   border-radius: 10px;
+
+  @media screen and (max-width: 480px) {
+    height: 199px;
+    margin-bottom: 0;
+ }
 }
+
+
+
+  
