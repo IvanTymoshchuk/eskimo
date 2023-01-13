@@ -17,15 +17,17 @@
 
 /* Стили для модальных окон */
 
-.modal {
+
+
+.modal{
   opacity: 0;
   visibility: hidden;
   width: 100%;
-
-  position: relative;
+  transform: translate(-50%, -50%);
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   z-index: 30;
 
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
@@ -85,16 +87,16 @@
   cursor: pointer;
 }
 
-/* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
+// /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
 
-a {
-  padding: 20px;
-  display: inline-block;
-  text-decoration: none;
-  margin: 10px;
-  color: $primary-white-color;
-  border-radius: 3px;
-}
+// // a {
+// //   padding: 20px;
+// //   display: inline-block;
+// //   text-decoration: none;
+// //   margin: 10px;
+// //   color: $primary-white-color;
+// //   border-radius: 3px;
+// // }
 
 /* -------------- madal form -------------- */
 
