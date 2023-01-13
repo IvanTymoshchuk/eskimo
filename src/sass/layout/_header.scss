@@ -129,12 +129,23 @@
     justify-content: center;
     text-align: center;
     padding-top: 100px;
+    transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+        overflow-y: scroll;
     @media screen and (min-width:480px) {
     padding-top: 104px;
         }
     @media screen and (min-width:768px) {
     padding-top: 140px;
     }
+}
+@media(min-width:1200px) {
+    .header__mob-menu {
+        display: none;
+    }
+}
+.header__mob-menu.is-open {
+    transform: translateX(0);
 }
 .header__btn-close{
     width: 32px;
@@ -144,6 +155,7 @@
     position: absolute;
     right: 20px;
     top: 16px;
+    cursor: pointer;
     @media screen and (min-width:480px) {
         top: 20px;
     }
