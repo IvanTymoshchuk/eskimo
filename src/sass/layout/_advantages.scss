@@ -27,6 +27,8 @@
     
 }
 
+
+
 .advantages__item{
     width: 100%;
     display: flex;
@@ -58,7 +60,7 @@ content: '';
     background-repeat: no-repeat;
     
     background-position: center;
-    background-color: #F8D24E;
+    background-color: $bg-color-button;
     @include tablet {
            
             margin-bottom: 32px;
@@ -74,29 +76,56 @@ content: '';
 background-image: url(../images/advantages/cow-icon.png);
 
 
- @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/advantages/cow-icon-2x.png);
-    }
+// @media (min-device-pixel-ratio: 2),
+//     (-webkit-min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//         background-image: url(../images/advantages/cow-icon-2x.png);
+//     }
+@include retina{
+    background-image: url(../images/advantages/cow-icon-2x.png);
+}
 
 
 
 }
-
 .advantages__item-kg::before {
-    background-image: url(../images/advantages/weight-icon.png);
-}
+    background-image:url(../images/advantages/weight-icon.png);
+
+    // @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //         background-image: url(../images/advantages/weight-icon-2x.png);
+    //     }
+@include retina {
+    background-image: url(../images/advantages/weight-icon-2x.png);
+
+
+
+}}
 .advantages__ice-cream::before {
     background-image: url(../images/advantages/ice-cream-icon.png);
+    // @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //         background-image: url(../images/advantages/ice-cream-icon-2x.png);
+        @include retina {
+                background-image: url(../images/advantages/ice-cream-icon-2x.png);
+            }
+
+
 }
+
+ 
+        
+
+
 
 
 .advantages__numbers {
 
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -105,7 +134,7 @@ background-image: url(../images/advantages/cow-icon.png);
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #FCFCFC;
+    color: $primary-white-color;
     
     
         @include tablet {
@@ -126,8 +155,8 @@ background-image: url(../images/advantages/cow-icon.png);
 }
 
 .advantages__text{
-    width: 230px;
-    font-family: 'Montserrat';
+         width: 230px;
+  
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
@@ -136,7 +165,7 @@ background-image: url(../images/advantages/cow-icon.png);
     
         text-align: center;
     
-       color:  #FCFCFC;
+       color: $primary-white-color;
         
         
             @include tablet {
