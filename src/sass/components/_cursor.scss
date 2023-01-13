@@ -12,3 +12,8 @@ button {
     cursor: url("data:image/svg+xml,%3Csvg width='19' height='24' viewBox='0 0 19 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.04696 2.01171L16.9811 12.2169C18.8522 13.9633 17.8177 17.1 15.2748 17.3907L11.1573 17.8612C10.124 17.9793 9.15329 18.4167 8.38025 19.1124L6.0069 21.2484C4.07633 22.9859 1 21.6159 1 19.0186V4.20487C1 1.58174 4.12929 0.221893 6.04696 2.01171Z' stroke='%23F8D24E%0A' stroke-width='2'/%3E%3C/svg%3E"),
         pointer;
 }
+
+.header__nav-button{
+    cursor: url("data:image/svg+xml,%3Csvg width='19' height='24' viewBox='0 0 19 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.04696 2.01171L16.9811 12.2169C18.8522 13.9633 17.8177 17.1 15.2748 17.3907L11.1573 17.8612C10.124 17.9793 9.15329 18.4167 8.38025 19.1124L6.0069 21.2484C4.07633 22.9859 1 21.6159 1 19.0186V4.20487C1 1.58174 4.12929 0.221893 6.04696 2.01171Z' stroke='%230A8817%0A' stroke-width='2'/%3E%3C/svg%3E"),
+            pointer;
+}
