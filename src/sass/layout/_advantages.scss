@@ -1,9 +1,32 @@
 .advantages__section{
     padding-top: 50px;
-    padding-bottom: 32px;
-    
+    padding-bottom: 60px;
 
+    @include mobile {
+            padding-top: 60px;
+                padding-bottom: 60px;
+        }
+            
+    
+        @include desktop {
+            padding-bottom: 80px;
+          }
+        }
+
+.advantages__list{
+
+    
+        @include tablet {
+            display: flex;
+            gap: 80px;
+        }
+    
+        @include desktop {
+            gap: 32px;
+        }
+    
 }
+
 .advantages__item{
     width: 100%;
     display: flex;
@@ -11,6 +34,28 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 32px;
+    &:last-child{
+    margin-bottom: 0px;
+    }
+         @include tablet {
+            // margin-right: 80px;
+            margin-bottom: 0px;
+            // &:last-child {
+            //         margin-right: 0px;
+            //     }
+                gap: 0px;
+         }
+//         @include desktop {
+//     margin-right: 32px;
+
+
+//     &:last-child {
+//         margin-right: 0px;
+//     }
+
+//     gap: 0px;
+// }
+
 }
 
 .advantages__item::before{
@@ -25,6 +70,16 @@ content: '';
     
     background-position: center;
     background-color: #F8D24E;
+    @include tablet {
+           
+            margin-bottom: 32px;
+    
+        }
+                 @include desktop {
+        
+                     margin-bottom: 40px;
+        
+                 }
 }
 .advantages__item-cow::before{
 background-image: url(../images/advantages/cow-icon.png);
@@ -50,11 +105,27 @@ background-image: url(../images/advantages/cow-icon.png);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FCFCFC;
+    
+    
+        @include tablet {
+         width: 152px;
+        font-size: 48px;
+        line-height: 1.23;
+        margin-bottom: 12px;
+
+        }
+    
+    
+        @include desktop {
+            font-size: 58px;
+            line-height: 1.22;
+        }
 
 
 }
 
 .advantages__text{
+    width: 230px;
     font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -65,6 +136,24 @@ background-image: url(../images/advantages/cow-icon.png);
         text-align: center;
     
        color:  #FCFCFC;
-}
+        
+        
+            @include tablet {
+                width: 152px;
+                font-weight: 400;
+                 font-size: 14px;
+                line-height: 1.74;
+            }
+        
+            @include desktop {
+                width: 368px;
+                    font-size: 16px;
+                    line-height: 1.76;
+                    
+                
+                
+                    letter-spacing: 0.02em;
+               
+}}
 
 
