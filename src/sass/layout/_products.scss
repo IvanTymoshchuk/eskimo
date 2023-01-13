@@ -1,0 +1,305 @@
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $inverse-color;
+  margin-right: auto;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: -450px -100px;
+  background-image: url(../images/bg-ice/bg_mob.png);
+  @include retina {
+    background-image: url(../images/bg-ice/bg_mob-2x.png);
+  }
+
+  @include tablet {
+    background-position: -20px -97px;
+    background-size: cover;
+    background-image: url(../images/bg-ice/bg_tablet.png);
+
+    @include retina {
+      background-image: url(../images/bg-ice/bg_tablet-2x.png);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/bg-ice/bg_desktop.png);
+    background-position: -46px -227px;
+    background-size: cover;
+
+    @include retina {
+      background-image: url(../images/bg-ice/bg_desktop-2x.png);
+    }
+  }
+}
+
+.products__title {
+  font-family: 'Seymour One';
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  margin-bottom: 148px;
+  @include tablet {
+    margin-bottom: 200px;
+    font-size: 34px;
+  }
+  @include desktop {
+    font-size: 36px;
+    letter-spacing: 0.06em;
+    margin-bottom: 300px;
+    line-height: 1.25;
+  }
+}
+
+.products__title__sec {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.23;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  display: inline-block;
+  margin-bottom: 12px;
+  @include tablet {
+    font-size: 22px;
+  }
+  @include desktop {
+    font-size: 30px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.products__list {
+  flex-direction: column;
+  gap: 168px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    gap: 16px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+  }
+  @include desktop {
+    gap: 29px;
+  }
+}
+
+.products__item {
+  max-width: 280px;
+  height: 420px;
+  flex-direction: column;
+  padding: 123px 40px 16px;
+  display: flex;
+  position: relative;
+  text-align: center;
+  @include mobile {
+    padding: 123px 25px 16px;
+    max-width: 250px;
+    height: 426px;
+  }
+  @include tablet {
+    padding: 108px 26px 16px;
+    max-width: 250px;
+    height: 428px;
+  }
+  @include desktop {
+    padding: 165px 64px 16px;
+    height: 536px;
+    max-width: 370px;
+  }
+  &:before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    @include desktop {
+      top: -200px;
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @include mobile {
+    max-width: 250px;
+  }
+  @include tablet {
+    max-width: 224px;
+  }
+  @include desktop {
+    max-width: 370px;
+  }
+}
+
+.products-frst {
+  background: #aec6a5;
+  border-radius: 24px;
+  &:before {
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  }
+}
+
+.products-scnd {
+  background: #efd478;
+  border-radius: 24px;
+  &:before {
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  }
+}
+
+.products-lst {
+  background: #d6936d;
+  border-radius: 24px;
+  &:before {
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.products__item:after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  top: -110px;
+  left: 50%;
+  background-position: 50%;
+  background-size: contain;
+  position: absolute;
+  transform: translate(-50%);
+  @include desktop {
+    width: 300px;
+    height: 300px;
+    top: -215px;
+  }
+}
+
+.products-frst:after {
+  background-image: url('../images/products/ice-cream-mob.png');
+  @include retina {
+    background-image: url('../images/products/ice-cream-mob-2x.png');
+  }
+  @include tablet {
+    background-image: url('../images/products/ice-cream-modal.png');
+
+    @include retina {
+      background-image: url('../images/products/ice-cream-modal-2x.png');
+    }
+  }
+  @include desktop {
+    background-image: url('../images/products/ice-cream-desktop.png');
+
+    @include retina {
+      background-image: url('../images/products/ice-cream-desktop-2x.png');
+    }
+  }
+}
+
+.products-scnd:after {
+  background-image: url('../images/products/ice-coffee-mob.png');
+  @include retina {
+    background-image: url('../images/products/ice-coffee-mob-2x.png');
+  }
+  @include tablet {
+    background-image: url('../images/products/ice-coffee-modal.png');
+
+    @include retina {
+      background-image: url('../images/products/ice-coffee-modal-2x.png');
+    }
+  }
+  @include desktop {
+    background-image: url('../images/products/ice-coffee-desktop.png');
+
+    @include retina {
+      background-image: url('../images/products/ice-coffee-desktop-2x.png');
+    }
+  }
+}
+
+.products-lst:after {
+  background-image: url('../images/products/milkshekes-mob.png');
+  @include retina {
+    background-image: url('../images/products/milkshekes-mob-2x.png');
+  }
+  @include tablet {
+    background-image: url('../images/products/milkshekes-modal.png');
+
+    @include retina {
+      background-image: url('../images/products/milkshekes-modal-2x.png');
+    }
+  }
+  @include desktop {
+    background-image: url('../images/products/milkshekes-desktop.png');
+
+    @include retina {
+      background-image: url('../images/products/milkshekes-desktop-2x.png');
+    }
+  }
+}
+
+.products-menu__title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  margin-bottom: 40px;
+  @include tablet {
+    font-size: 22px;
+  }
+  @include desktop {
+    margin-bottom: 66px;
+    font-size: 30px;
+  }
+}
+.products-menu__text {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $primary-text-color;
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.products-menu__btn {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  background: none;
+  border: none;
+  @include tablet {
+    bottom: 12px;
+  }
+  @include desktop {
+    bottom: 60px;
+  }
+}
