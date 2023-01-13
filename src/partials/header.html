@@ -7,23 +7,24 @@
                 <source srcset="./images/hero-header/logo-tablet.png 1x, ./images/hero-header/logo-tablet-2x.png 2x"
                     media="(min-width: 768px)" />
                 <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob-2x.png 2x"
-                    media="(min-width:480px)" />
+                    />
                 <img src="./images/hero-header/logo-mob.png" alt="" />
             </picture>
         </a>
-        
-        <ul class="header__list">
-            <li class="header__block"><a class="header__nav-link" href="./index.html">Home</a></li>
-            <li class="header__block"><a class="header__nav-link" href="">How it’s made?</a></li>
-            <li class="header__block"><a class="header__nav-link" href="">Our products</a></li>
-            <li class="header__block"><a class="header__nav-link" href="">Contact</a></li>
-        </ul>
-        <button class="header__mob-btn">
-            <svg class="header__mob-icon">
-                <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
-            </svg>
-        </button>
-        <button class="header__button">Buy now
-        </button>
+        <div class="header__wrapper">
+            <ul class="header__list">
+                <li class="header__block"><button class="header__nav-button" href="./index.html">Home</и></li>
+                <li class="header__block"><button class="header__nav-button" href="">How it’s made?</button></li>
+                <li class="header__block"><button class="header__nav-button" href="">Our products</button></li>
+                <li class="header__block"><button class="header__nav-button" href="">Contact</button></li>
+            </ul>
+            <button class="header__mob-btn">
+                <svg class="header__mob-icon">
+                    <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
+                </svg>
+            </button>
+            <button class="header__button">Buy now <svg class="header__bth-icon"><use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use></svg>
+            </button>
+        </div>
     </nav>
 </header>

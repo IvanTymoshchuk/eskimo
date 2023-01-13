@@ -13,10 +13,20 @@
 }
 .hero{
     position: relative;
-    @media screen and (min-width:768px) {
-        display: flex;
-    }
+    display: flex;
 
+}
+.hero__content{
+    margin-bottom: 236px;
+        @media screen and (min-width:480px) {
+                margin-bottom: 150px;
+            }
+        @media screen and (min-width:768px) {
+            margin-bottom: 12px;
+        }
+        @media screen and (min-width:1200px) {
+            margin-bottom: 65px;
+        }
 }
 .hero__wrapper{
     display: flex;
@@ -52,11 +62,12 @@
         }
 }
 .hero__btn-list{
+    
     @media screen and (min-width:768px) {
             margin-bottom: 18px;
         }
         @media screen and (min-width:1200px) {
-            margin-bottom: 53px;
+            margin-bottom: 45px;
         }
 }
 .hero__btn-product{
@@ -130,18 +141,29 @@
     }
 }
 .hero_ice-cream{
-    @media screen and (min-width:1200px) {
-            margin-left: 195px;
+    position: absolute;
+    bottom: 0;
+    left: 83px;
+    @media screen and (min-width:480px) {
+            left: 242px;
         }
-    @media screen and (min-width:767px) and (max-width:1199px) {
-        margin-top: 20px;
-        margin-left: 53px;
-    }
+    @media screen and (min-width:767px) {
+            left: 408px;
+        }
+    @media screen and (min-width:1200px) {
+        left: 652px;
+        bottom: 0;
+        }
 }
 .hero__dots{
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
     z-index: -1;
+    @media screen and (min-width:768px) {
+        width: 100%;
+        left: 0;
+    }
+    @media screen and (min-width:480px) and (max-width:767px) {
+        right: 0;
+    }
 }
