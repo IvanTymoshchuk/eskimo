@@ -1,10 +1,12 @@
+
 .modal{
     border: 2px solid $bg-color-button;
     border-radius: 10px;
     padding: 28px;
     max-width: 75vw;
     
-    @media screen and (min-width: 480px)
+    
+    @media screen and (min-width: 480px) 
     {
         max-width: 400px;
     }
@@ -13,7 +15,12 @@
      {
         max-width: 568px;
         padding: 32px 60px;
- }
+    }
+
+    @include desktop {
+        width: 568px;
+       
+    }
 }
 
 .modal__close{
@@ -42,6 +49,11 @@
     align-items: center;
     text-align: center;
     
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    
 }
 
 .modal__video{
@@ -49,6 +61,10 @@
     height: 205px;
     margin-bottom: 32px;
     border-radius: 10px;
+    @media screen and (max-width: 480px) {
+        
+        margin-bottom: 24px;
+      }
 }
 
 .modal__text{

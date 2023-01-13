@@ -27,9 +27,9 @@
   position: fixed;
   top: 50%;
   left: 50%;
-
+  
   z-index: 30;
-
+  max-height: calc(100% - 260px);
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
 
@@ -38,6 +38,10 @@
   border-radius: 10px;
   transition: 0.3s all;
   padding: 40px;
+
+  @media screen and (max-width: 460px) {
+    max-height: calc(100% - 20px);
+  }
 
   @include mobile {
     width: 480px;
@@ -49,7 +53,7 @@
 
   @include desktop {
     width: 568px;
-    height: 668px;
+    // height: 668px;
   }
 }
 
@@ -60,19 +64,19 @@
   visibility: visible;
 }
 
-.modal.active {
+.modal.active  {
   opacity: 1;
   visibility: visible;
 
-  @include tablet {
-    width: 568px;
-    height: 668px;
-  }
+  // @include tablet {
+  //   width: 568px;
+  //   height: 668px;
+  // }
 
-  @include desktop {
-    width: 568px;
-    height: 668px;
-  }
+  // @include desktop {
+  //   width: 568px;
+  //   height: 668px;
+  // }
 }
 
 /* Стили для кнопки закрытия */

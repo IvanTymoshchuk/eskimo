@@ -16,6 +16,11 @@ align-items: center;
 text-align: center;
 text-decoration: none;
 color: $primary-text-color;
+
+@media screen and (max-width: 480px) {
+    
+    margin-top: 24px;
+  }
 }
 
 .modal__map{
@@ -23,5 +28,9 @@ color: $primary-text-color;
     height: 205px;
     margin-bottom: 32px;
     border-radius: 10px;
-    
+     
+    @media screen and (max-width: 480px) {
+        height: 199px;
+        margin-bottom: 0;
+  }
 }
