@@ -41,6 +41,11 @@
     margin-bottom: 32px;
     align-items: center;
     text-align: center;
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
     
 }
 
@@ -49,6 +54,11 @@
     height: 205px;
     margin-bottom: 32px;
     border-radius: 10px;
+
+    @media screen and (max-width: 480px) {
+        
+        margin-bottom: 24px;
+      }
 }
 
 .modal__text{
@@ -63,3 +73,15 @@
     text-align: start;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
