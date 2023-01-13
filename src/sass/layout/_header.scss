@@ -28,6 +28,17 @@
         display: none;
     }
 }
+.header__mob-link{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: $primary-white-color;
+    text-decoration: none;
+    @media screen and (min-width:768px) {
+            font-size: 48px;
+            line-height: 59px;
+        }
+}
 .header__wrapper{
     display: flex;
     align-items: center;
@@ -41,6 +52,7 @@
     padding: 0;
     width: 48px;
     height: 44px;
+    z-index: 2;
     @media screen and (min-width:1200px) {
         width: 60px;
         height: 65px;
@@ -103,4 +115,79 @@
     height: 12px;
     margin-left: 4px;
     fill: currentColor;
+}
+
+
+.header__mob-menu {
+    z-index: 1;
+    position: fixed;
+    background-color: #84A178;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    @media screen and (min-width:480px) {
+    padding-top: 104px;
+        }
+    @media screen and (min-width:768px) {
+    padding-top: 140px;
+    }
+}
+.header__btn-close{
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    @media screen and (min-width:480px) {
+        top: 20px;
+    }
+    @media screen and (min-width:768px) {
+        right: 32px;
+        top: 32px;
+    }
+}
+.header__icon-close{
+    width: 100%;
+    height: 100%;
+}
+.header__mob-list{
+            margin-bottom:110px ;
+    @media screen and (min-width:480px) {
+            margin-bottom: 114px;
+        }
+    @media screen and (min-width:768px) {
+            margin-bottom: 140px;
+    }
+}
+.header__mob-block:not(:last-child){
+    margin-bottom: 32px;
+    @media screen and (min-width:768px) {
+        margin-bottom: 40px;
+    }
+}
+.header__tel-button{
+    background-color: #F8D24E;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 12px 36px;
+
+    &:hover {
+        background-color: #0A8817;
+        color: #000000;
+    }
+
+    &:focus {
+        background-color: #0A8817;
+        color: #FCFCFC;
+    }
 }
