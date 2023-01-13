@@ -17,13 +17,9 @@
 
 /* Стили для модальных окон */
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
 
-.modal.active {
+
+.modal{
   opacity: 0;
   visibility: hidden;
   width: 100%;
