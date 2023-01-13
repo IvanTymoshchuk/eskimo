@@ -1,0 +1,32 @@
+#scroll-to-top {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  right: 20px;
+
+  font-size: 12px;
+  background: rgba(254, 238, 181, 0.5);
+  opacity: 0;
+  z-index: 2;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  transform: translateY(30%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+  @include tablet {
+    font-size: 14px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+  }
+  @include desktop {
+    right: 50px;
+    font-size: 16px;
+  }
+}

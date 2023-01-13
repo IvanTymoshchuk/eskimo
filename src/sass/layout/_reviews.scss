@@ -1,29 +1,32 @@
 .review {
   background-color: $inverse-color;
   margin-right: auto;
+  padding: 257px 0 396px;
   background-size: cover;
   background-position: -255px -173px;
   // background-position: 50% 50%;
   // mobile default
-  height: 1132px;
+  // height: 1132px;
   background-image: url(../images/bg-ice/bg_mob.png);
   @include retina {
     background-image: url(../images/bg-ice/bg_mob-2x.png);
   }
 
   @include tablet {
+    padding: 283px 0 390px;
     background-position: 0 0;
     background-image: url(../images/bg-ice/bg_tablet.png);
-    height: 1017px;
+    // height: 1017px;
     @include retina {
       background-image: url(../images/bg-ice/bg_tablet-2x.png);
     }
   }
 
   @include desktop {
+    padding: 464px 0 228px;
     background-position: right 40px top -250px;
     background-image: url(../images/bg-ice/bg_desktop.png);
-    height: 1053px;
+    // height: 1053px;
     @include retina {
       background-image: url(../images/bg-ice/bg_desktop-2x.png);
     }
@@ -31,19 +34,8 @@
 }
 
 .review__customer_img {
-  padding: 55% 0 0;
+  width: 85px;
   margin: 0px auto 32px;
-
-  // mobile default
-  padding: 257px 0 0;
-
-  @include tablet {
-    padding: 283px 0 0;
-  }
-
-  @include desktop {
-    padding: 464px 0 0;
-  }
 }
 
 .review__content {
@@ -84,7 +76,7 @@
   @include font(500, 20, 1.86, null);
 
   @include tablet {
-    @include font(500, null, 1.86, null);
+    @include font(500, 16, 1.86, null);
     margin-bottom: 32px;
   }
 }
@@ -95,6 +87,11 @@
 
 .slick-dots li.slick-active button:before {
   color: $bg-color-body;
+  font-size: 12px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
 }
 
 .slick-dots li button {
