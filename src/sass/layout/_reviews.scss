@@ -1,65 +1,92 @@
 .review {
-  background-image: url(../images/bg-ice/bg_desktop.png);
   background-color: $inverse-color;
-  height: 1053px;
   margin-right: auto;
+  background-size: cover;
+  background-position: -255px -173px;
+  // background-position: 50% 50%;
+  // mobile default
+  height: 1132px;
+  background-image: url(../images/bg-ice/bg_mob.png);
+  @include retina {
+    background-image: url(../images/bg-ice/bg_mob-2x.png);
+  }
+
+  @include tablet {
+    background-position: 0 0;
+    background-image: url(../images/bg-ice/bg_tablet.png);
+    height: 1017px;
+    @include retina {
+      background-image: url(../images/bg-ice/bg_tablet-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-position: right 40px top -250px;
+    background-image: url(../images/bg-ice/bg_desktop.png);
+    height: 1053px;
+    @include retina {
+      background-image: url(../images/bg-ice/bg_desktop-2x.png);
+    }
+  }
 }
-// .one-time {
-// }
 
 .review__customer_img {
   padding: 55% 0 0;
   margin: 0px auto 32px;
-    @media screen and (min-width: 480px) {
-        padding: 257px 0 0;
-      }
-    
-      @media screen and (min-width: 768px) {
-        padding: 283px 0 0;
-      }
-    
-      @media screen and (min-width: 1200px) {
-        padding: 464px 0 0;
-      }
+
+  // mobile default
+  padding: 257px 0 0;
+
+  @include tablet {
+    padding: 283px 0 0;
+  }
+
+  @include desktop {
+    padding: 464px 0 0;
+  }
 }
 
 .review__content {
-  @include font(400, 12, 2.55, null);
   text-align: center;
   color: $fill-icon;
   background-color: $bg-color-body;
   padding: 35px 39px;
   border-radius: 10px;
   width: calc(100% - 40px);
-  // margin: 0 93px;
-  // height: 54px;
   margin: 0 auto;
   margin-bottom: 32px;
 
-    @media screen and (min-width: 480px) {
-      padding: 35px 39px;
-      width: 280px;
-      }
+  // mobile default
+  @include font(400, 12, 2.55, 0.04);
+  padding: 35px 39px;
+  width: 280px;
 
-    @media screen and (min-width: 768px) {
-      @include font(500, 14, 1.86, 0.04);
-      padding: 42px 80px;
-      border-radius: 24px;
-      width: 705px;
-    }
-  
-    @media screen and (min-width: 1200px) {
-      @include font(500, 16, 1.86, 0.04);
-      padding: 42px 80px;
-      width: 968px;
-    }
+  @include tablet {
+    @include font(500, 14, 1.86, 0.04);
+    padding: 28px 80px;
+    border-radius: 24px;
+    width: 693px;
+    // width: 705px; bad width - glued!
+  }
 
+  @include desktop {
+    @include font(500, 16, 1.86, 0.04);
+    padding: 42px 80px;
+    width: 968px;
+  }
 }
+
 .review__paragraph {
-  @include font(500, null, 1.86, 0.04);
   text-align: center;
   color: $primary-text-color;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
+  // mobile default
+  @include font(500, 20, 1.86, null);
+
+  @include tablet {
+    @include font(500, null, 1.86, null);
+    margin-bottom: 32px;
+  }
 }
 
 .slick-dots {
@@ -69,8 +96,10 @@
 .slick-dots li.slick-active button:before {
   color: $bg-color-body;
 }
-.slick-dots li button:before {
+
+.slick-dots li button {
   color: $nonactive-slide-button-color;
-  width: 12px;
-  height: 12px;
+  padding: 4px;
 }
+
+// continue
