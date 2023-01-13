@@ -17,19 +17,15 @@
 
 /* Стили для модальных окон */
 
-
-
-.modal{
+.modal {
   opacity: 0;
   visibility: hidden;
-  width: 100%;
   transform: translate(-50%, -50%);
   position: fixed;
+  width: 100%;
   top: 50%;
   left: 50%;
-
   z-index: 30;
-
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
 
@@ -40,11 +36,8 @@
   padding: 40px;
 
   @include mobile {
-    width: 480px;
-  }
-
-  @include tablet {
-    width: 568px;
+    width: 280px;
+    height: 365px;
   }
 
   @include desktop {
@@ -65,11 +58,6 @@
   visibility: visible;
 
   @include tablet {
-    width: 568px;
-    height: 668px;
-  }
-
-  @include desktop {
     width: 568px;
     height: 668px;
   }
