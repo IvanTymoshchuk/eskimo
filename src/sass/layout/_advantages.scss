@@ -1,7 +1,7 @@
 .advantages__section {
   padding-bottom: 32px;
- 
-@include tablet {
+
+  @include tablet {
     padding-bottom: 41px;
   }
 
@@ -29,26 +29,29 @@
   gap: 16px;
 
   @media screen and (max-width: 480px) {
-    
+
 
     &:not(:last-child) {
       margin-bottom: 28px;
     }
   }
-    @include mobile {
-   
-    
-      &:not(:last-child) {
-        margin-bottom: 32px;
-      }
+
+  @include mobile {
+
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
     }
-    @include tablet {
-  gap: 0px;
-  &:not(:last-child) {
+  }
+
+  @include tablet {
+    gap: 0px;
+
+    &:not(:last-child) {
       margin-bottom: 0px;
     }
-      
-    }
+
+  }
 }
 
 .advantages__item::before {
@@ -64,13 +67,16 @@
   background-size: 36px 36px;
   background-position: center;
   background-color: $bg-color-button;
+
   @include tablet {
     margin-bottom: 32px;
   }
+
   @include desktop {
     margin-bottom: 40px;
   }
 }
+
 .advantages__item-cow::before {
   background-image: url(../images/advantages/cow-icon.png);
 
@@ -78,6 +84,7 @@
     background-image: url(../images/advantages/cow-icon-2x.png);
   }
 }
+
 .advantages__item-kg::before {
   background-image: url(../images/advantages/weight-icon.png);
 
@@ -85,6 +92,7 @@
     background-image: url(../images/advantages/weight-icon-2x.png);
   }
 }
+
 .advantages__ice-cream::before {
   background-image: url(../images/advantages/ice-cream-icon.png);
 
@@ -94,7 +102,7 @@
 }
 
 .advantages__numbers {
- 
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.22;
@@ -105,7 +113,7 @@
   color: $primary-white-color;
 
   @include tablet {
-   
+
     font-size: 48px;
     line-height: 1.23;
     margin-bottom: 12px;
@@ -120,7 +128,7 @@
 .advantages__text {
   width: 230px;
 
-  
+
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
