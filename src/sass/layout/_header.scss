@@ -47,6 +47,10 @@
     line-height: 39px;
     color: $primary-white-color;
     text-decoration: none;
+    @include transition(color);
+        &:focus {
+            color: $primary-text-color;
+        }
     @include tablet {
             font-size: 48px;
             line-height: 59px;
@@ -187,10 +191,18 @@
         right: 32px;
         top: 32px;
     }
+    @include transition(fill);
+    &:focus {
+        fill: $primary-text-color;
+    }
 }
 .header__icon-close{
     width: 32px;
     height: 32px;
+
+    &:focus {
+        fill: currentColor;
+    }
 }
 
 .header__mob-block{
