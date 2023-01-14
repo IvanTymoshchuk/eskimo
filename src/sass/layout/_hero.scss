@@ -16,7 +16,7 @@
   display: flex;
 }
 .hero__content {
-  margin-bottom: 236px;
+  margin-bottom: 250px;
   @media screen and (min-width: 480px) {
     margin-bottom: 150px;
   }
@@ -61,6 +61,8 @@
   }
 }
 .hero__btn-list {
+  display: inline-flex;
+  align-items: center;
   @media screen and (min-width: 768px) {
     margin-bottom: 18px;
   }
@@ -124,6 +126,9 @@
     display: none;
   }
 }
+.hero__block:not(:last-child){
+  margin-bottom: 16px;
+}
 .hero__num {
   font-weight: 900;
   font-size: 28px;
@@ -178,12 +183,9 @@
 .hero_ice-cream {
   position: absolute;
   bottom: 0;
-  left: 83px;
-  @media screen and (min-width: 480px) {
-    left: 242px;
-  }
+  right: 20px;
   @media screen and (min-width: 767px) {
-    left: 408px;
+    right: 92px;
   }
   @media screen and (min-width: 1200px) {
     left: 652px;
@@ -194,11 +196,14 @@
   position: absolute;
   bottom: 0;
   z-index: -1;
+  right: 0;
+  @media screen and (max-width: 479px) {
+    }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+      right: 0;
+    }
   @media screen and (min-width: 768px) {
     width: 100%;
     left: 0;
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    right: 0;
   }
 }
