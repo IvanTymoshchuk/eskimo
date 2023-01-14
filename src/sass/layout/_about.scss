@@ -85,15 +85,32 @@
 //     margin-bottom: 60px;
 //   }
 // }
-.about_picture {
+
+.about_picture_div {
   background: linear-gradient(
       0deg,
       rgba(248, 210, 78, 0.7),
       rgba(248, 210, 78, 0.7)
     ),
     #d9d9d9;
-  box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
-  border-radius: 250px;
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  border-radius: 140px;
+  @include tablet {
+    border-radius: 165px;
+  }
+  @include desktop {
+    border-radius: 250px;
+  }
+}
+.about_picture {
+  display: block;
+  transform: translateY(22px);
+  @include tablet {
+    transform: translateY(26px);
+  }
+  @include desktop {
+    transform: translateY(39px);
+  }
 }
 
 .about_text {
