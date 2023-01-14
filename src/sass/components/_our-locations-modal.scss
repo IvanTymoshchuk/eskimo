@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .modal.modal-our {
   @include mobile {
     width: 100%;
@@ -5,6 +6,29 @@
   @include tablet {
     width: 568px;
     height: 449px;
+=======
+ 
+.modal__map-btn{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 1.21;
+min-width:145px;
+display: inline-block;
+padding: 12px 24px;
+margin-top: 32px;
+background: $bg-color-button;
+border-radius: 10px;
+border: none;
+align-items: center;
+text-align: center;
+text-decoration: none;
+color: $primary-text-color;
+
+@media screen and (max-width: 480px) {
+    margin-top: 24px;
+>>>>>>> Stashed changes
   }
 }
 
