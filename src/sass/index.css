@@ -135,7 +135,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .modal.modal-buy {
     width: 100%;
   }
@@ -143,19 +143,17 @@ body {
 @media screen and (min-width: 768px) {
   .modal.modal-buy {
     width: 568px;
-    height: 996px;
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 480px) {
-  .modal.modal-nutrition {
+@media screen and (min-width: 480px) {
+  .modal.modal-nytrition {
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .modal.modal-nutrition {
+  .modal.modal-nytrition {
     width: 568px;
-    height: 644px;
   }
 }
 

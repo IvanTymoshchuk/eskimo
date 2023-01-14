@@ -1,6 +1,6 @@
 <div class="modal modal-buy" data-modal="1">
   <button class="modal__close js-modal-close">
-    <svg class="modal__icon" width="24" height="24">
+    <svg class="modal__icon">
       <use href="/src/images/icons.svg/sprite.svg#icon-close-line"></use>
     </svg>
   </button>
@@ -18,17 +18,17 @@
         />
         <source
           srcset="
+            ./images/products/ice-cream-mob.png    1x,
+            ./images/products/ice-cream-mob-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
             ./images/products/ice-cream-modal.png    1x,
             ./images/products/ice-cream-modal-2x.png 2x
           "
           media="(min-width: 480px)"
-        />
-        <source
-          srcset="
-            ./images/products/ice-cream-mob.png    1x,
-            ./images/products/ice-cream-mob-2x.png 2x
-          "
-          media="(min-width: 320px)"
         />
         <img
           class="products__picture"
@@ -36,80 +36,209 @@
           alt="Ice cream"
         />
       </picture>
-      <div class="back-shadow"></div>
-    </div>
-
-    <div class="nutrition-facts">
-      <div class="nutrition-facts__list">
-        <div class="nutrition-facts__list-weight">320</div>
-        <div class="nutrition-facts__list-measure">kcal</div>
-      </div>
-      <div class="nutrition-facts__list">
-        <div class="nutrition-facts__list-weight">4g</div>
-        <div class="nutrition-facts__list-measure">Protein...</div>
-      </div>
-      <div class="nutrition-facts__list">
-        <div class="nutrition-facts__list-weight">8,2g</div>
-        <div class="nutrition-facts__list-measure">Fats</div>
-      </div>
-      <div class="nutrition-facts__list">
-        <div class="nutrition-facts__list-weight">40,4g</div>
-        <div class="nutrition-facts__list-measure">Carbs</div>
+      <div class="ice-menu__picture ice-menu__cream-picture"></div>
+      <div class="ice-menu__wrap ice-menu__cream-wrap">
+        <h3 class="ice-menu__title">ICE CREAM</h3>
       </div>
     </div>
-
-    <h3 class="ingredient-title">Ingredients</h3>
-    <div class="nutrition">
-      <ul class="nutrition-ingredients">
-        <li>Milk</li>
-        <li>100ml</li>
-      </ul>
-      <ul class="nutrition-ingredients">
-        <li>Belgian chocolate</li>
-        <li>20g</li>
-      </ul>
-      <ul class="nutrition-ingredients">
-        <li>Cream</li>
-        <li>150 ml</li>
-      </ul>
-      <ul class="nutrition-ingredients">
-        <li>MCocoa powder</li>
-        <li>30g</li>
-      </ul>
-      <ul class="nutrition-ingredients">
-        <li>Sugar</li>
-        <li>40g</li>
-      </ul>
-      <ul class="nutrition-ingredients">
-        <li>Vanilla sugar</li>
-        <li>10g</li>
-      </ul>
+    <div class="ice-menu__container">
+      <picture class="ice-menu__image">
+        <source
+          srcset="
+            ./images/products/ice-coffee-desktop.png    1x,
+            ./images/products/ice-coffee-desktop-2x.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            ./images/products/ice-coffee-mob.png    1x,
+            ./images/products/ice-coffee-mob-2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/products/ice-coffee-modal.png    1x,
+            ./images/products/ice-coffee-modal-2x.png 2x
+          "
+          media="(min-width: 480px)"
+        />
+        <img
+          class="products__picture"
+          src="./images/products/ice-coffee-desktop.png"
+          alt="Ice coffee"
+        />
+      </picture>
+      <div class="ice-menu__picture ice-menu__coffee-picture"></div>
+      <div class="ice-menu__wrap ice-menu__coffee-wrap">
+        <h3 class="ice-menu__title">ICE COFFEE</h3>
+      </div>
     </div>
-    <form class="form-modal-2">
-      <input
-        class="field-group__input"
-        type="text"
-        name="user-name"
-        id="user-name"
-        placeholder="Name"
-      />
 
-      <input
-        class="field-group__input"
-        type="tel"
-        id="tel"
-        placeholder="Phone"
-      />
-
-      <textarea
-        id="comment"
-        class="field-group__textarea"
-        name="comment"
-        rows="10"
-        placeholder="Comment"
-      ></textarea>
-
-      <button class="field-group__send-button" type="submit">Submit</button>
-    </form>
+    <div class="ice-menu__container">
+      <picture class="ice-menu__image">
+        <source
+          srcset="
+            ./images/products/milkshekes-desktop.png    1x,
+            ./images/products/milkshekes-desktop-2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/products/milkshekes-mob.png    1x,
+            ./images/products/milkshekes-mob-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/products/milkshekes-modal.png    1x,
+            ./images/products/milkshekes-modal-2x.png 2x
+          "
+          media="(min-width: 480px)"
+        />
+        <img
+          class="products__picture"
+          src="./images/products/milkshekes-desktop.png"
+          alt="Milkshake"
+        />
+      </picture>
+      <div class="ice-menu__picture ice-menu__shake-picture"></div>
+      <div class="ice-menu__wrap ice-menu__shake-wrap">
+        <h3 class="ice-menu__title">MILKSHAKE</h3>
+      </div>
+    </div>
   </div>
+
+  <form>
+    <input
+      class="field-group__input"
+      type="text"
+      name="user-name"
+      id="user-name"
+      placeholder="Name"
+    />
+
+    <input class="field-group__input" type="tel" id="tel" placeholder="Phone" />
+
+    <textarea
+      id="comment"
+      class="field-group__textarea"
+      name="comment"
+      rows="10"
+      placeholder="Comment"
+    ></textarea>
+
+    <button class="field-group__send-button" type="submit">Submit</button>
+  </form>
+</div>
+
+<div class="modal modal-nutrition" data-modal="5">
+  <button class="modal__close js-modal-close">
+    <svg class="modal__icon">
+      <use href="/src/images/icons.svg/sprite.svg#icon-close-line"></use>
+    </svg>
+  </button>
+  <h2 class="modal__title">Chololate icecream</h2>
+  <div class="modal-picture__wrap">
+    <picture class="modal-picture">
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 480px)"
+      />
+      <img
+        class="products__picture"
+        src="./images/products/ingredients-ice-cream-modal.png"
+        alt="Ingredients Ice cream"
+      />
+    </picture>
+    <div class="back-shadow"></div>
+  </div>
+
+  <div class="nutrition-facts">
+    <div class="nutrition-facts__list">
+      <div class="nutrition-facts__list-weight">320</div>
+      <div class="nutrition-facts__list-measure">kcal</div>
+    </div>
+    <div class="nutrition-facts__list">
+      <div class="nutrition-facts__list-weight">4g</div>
+      <div class="nutrition-facts__list-measure">Protein...</div>
+    </div>
+    <div class="nutrition-facts__list">
+      <div class="nutrition-facts__list-weight">8,2g</div>
+      <div class="nutrition-facts__list-measure">Fats</div>
+    </div>
+    <div class="nutrition-facts__list">
+      <div class="nutrition-facts__list-weight">40,4g</div>
+      <div class="nutrition-facts__list-measure">Carbs</div>
+    </div>
+  </div>
+
+  <h3 class="ingredient-title">Ingredients</h3>
+  <div class="nutrition">
+    <ul class="nutrition-ingredients">
+      <li>Milk</li>
+      <li>100ml</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Belgian chocolate</li>
+      <li>20g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Cream</li>
+      <li>150 ml</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>MCocoa powder</li>
+      <li>30g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Sugar</li>
+      <li>40g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Vanilla sugar</li>
+      <li>10g</li>
+    </ul>
+  </div>
+  <form class="form-modal-2">
+    <input
+      class="field-group__input"
+      type="text"
+      name="user-name"
+      id="user-name"
+      placeholder="Name"
+    />
+
+    <input class="field-group__input" type="tel" id="tel" placeholder="Phone" />
+
+    <textarea
+      id="comment"
+      class="field-group__textarea"
+      name="comment"
+      rows="10"
+      placeholder="Comment"
+    ></textarea>
+
+    <button class="field-group__send-button" type="submit">Submit</button>
+  </form>
 </div>

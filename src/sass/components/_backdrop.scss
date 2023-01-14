@@ -99,24 +99,22 @@
 // <div class="overlay js-overlay-modal"></div>
 
 .modal.modal-buy {
-  @media screen and (max-width: 767px) and (min-width: 480px) {
+  @media screen and (min-width: 480px) {
     width: 100%;
   }
 
   @media screen and (min-width: 768px) {
     width: 568px;
-    height: 996px;
   }
 }
 
-.modal.modal-nutrition {
-  @media screen and (max-width: 767px) and (min-width: 480px) {
+.modal.modal-nytrition {
+  @media screen and (min-width: 480px) {
     width: 100%;
   }
 
   @media screen and (min-width: 768px) {
     width: 568px;
-    height: 644px;
   }
 }
 
