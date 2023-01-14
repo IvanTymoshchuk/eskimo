@@ -1,48 +1,86 @@
 <header class="header">
-    <nav class="header__nav">
-        <a href="#" class="header__logo">
-            <picture>
-                <source srcset="./images/hero-header/logo-desktop.png 1x, ./images/hero-header/logo-desktop-2x.png 2x"
-                    media="(min-width: 1200px)" />
-                <source srcset="./images/hero-header/logo-tablet.png 1x, ./images/hero-header/logo-tablet-2x.png 2x"
-                    media="(min-width: 768px)" />
-                <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob-2x.png 2x"
-                    />
-                <img src="./images/hero-header/logo-mob.png" alt="" />
-            </picture>
-        </a>
-        <div class="header__wrapper">
-            <ul class="header__list">
-                <li class="header__block"><button class="header__nav-button" href="./index.html">Home</и></li>
-                <li class="header__block"><button class="header__nav-button" href="">How it’s made?</button></li>
-                <li class="header__block"><button class="header__nav-button" href="">Our products</button></li>
-                <li class="header__block"><button class="header__nav-button" href="">Contact</button></li>
-            </ul>
-            <button class="header__mob-btn js-open-menu">
-                <svg class="header__mob-icon">
-                    <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
-                </svg>
-            </button>
-            <button class="header__button">Buy now <svg class="header__bth-icon"><use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use></svg>
-            </button>
-        </div>
-    </nav>
-
-
-    <div class="header__mob-menu js-menu-container">
-        <button class="header__btn-close js-close-menu"><svg class="header__icon-close">
-                <use href="./images/icons.svg/sprite.svg#icon-close-line"></use>
-            </svg></button>
-        <div>
-            <ul class="header__mob-list">
-                <li class="header__mob-block"><a href="#" class="header__mob-link">Home</a></li>
-                <li class="header__mob-block"><a href="#" class="header__mob-link">How it’s made?</a></li>
-                <li class="header__mob-block"><a href="#" class="header__mob-link">Our products</a></li>
-                <li class="header__mob-block"><a href="#" class="header__mob-link">Contact</a></li>
-            </ul>
-            <button class="header__tel-button">Buy now <svg class="header__bth-icon">
-                    <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
-                </svg>
-        </div>
+  <nav class="header__nav">
+    <a href="#" class="header__logo">
+      <picture>
+        <source
+          srcset="
+            ./images/hero-header/logo-desktop.png    1x,
+            ./images/hero-header/logo-desktop-2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero-header/logo-tablet.png    1x,
+            ./images/hero-header/logo-tablet-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hero-header/logo-mob.png    1x,
+            ./images/hero-header/logo-mob-2x.png 2x
+          "
+        />
+        <img src="./images/hero-header/logo-mob.png" alt="" />
+      </picture>
+    </a>
+    <div class="header__wrapper">
+      <ul class="header__list">
+        <li class="header__block">
+          <a class="header__nav-button" href="./index.html">Home</a>
+        </li>
+        <li class="header__block">
+          <a class="header__nav-button" href="#about">How it’s made?</a>
+        </li>
+        <li class="header__block">
+          <a class="header__nav-button" href="#products">Our products</a>
+        </li>
+        <li class="header__block">
+          <a class="header__nav-button" href="#contacts">Contact</a>
+        </li>
+      </ul>
+      <button class="header__mob-btn js-open-menu">
+        <svg class="header__mob-icon">
+          <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
+        </svg>
+      </button>
+      <button class="header__button">
+        Buy now
+        <svg class="header__bth-icon">
+          <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
+        </svg>
+      </button>
     </div>
+  </nav>
+
+  <div class="header__mob-menu js-menu-container">
+    <button class="header__btn-close js-close-menu">
+      <svg class="header__icon-close">
+        <use href="./images/icons.svg/sprite.svg#icon-close-line"></use>
+      </svg>
+    </button>
+    <div>
+      <ul class="header__mob-list">
+        <li class="header__mob-block">
+          <a href="#" class="header__mob-link">Home</a>
+        </li>
+        <li class="header__mob-block">
+          <a href="#about" class="header__mob-link">How it’s made?</a>
+        </li>
+        <li class="header__mob-block">
+          <a href="#products" class="header__mob-link">Our products</a>
+        </li>
+        <li class="header__mob-block">
+          <a href="#contacts" class="header__mob-link">Contact</a>
+        </li>
+      </ul>
+      <button class="header__tel-button">
+        Buy now
+        <svg class="header__bth-icon">
+          <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </header>
