@@ -107,6 +107,16 @@
 
   color: $primary-text-color;
 
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 30%, 0.651) 0,
+    hsla(0, 0%, 100%, 0) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s infinite linear;
+
   @include mobile {
     margin-bottom: 25px;
 
@@ -144,6 +154,18 @@
     display: flex;
     align-items: center;
     text-align: center;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 650px;
   }
 }
 
