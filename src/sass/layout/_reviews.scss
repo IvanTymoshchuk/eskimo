@@ -51,20 +51,20 @@
   // mobile default
   @include font(400, 12, 2.55, 0.04);
   padding: 35px 39px;
-  width: 280px;
+  max-width: 280px;
 
   @include tablet {
     @include font(500, 14, 1.86, 0.04);
     padding: 28px 80px;
     border-radius: 24px;
-    width: 693px;
+    max-width: 693px;
     // width: 705px; bad width - glued!
   }
 
   @include desktop {
     @include font(500, 16, 1.86, 0.04);
     padding: 42px 80px;
-    width: 968px;
+    max-width: 968px;
   }
 }
 
