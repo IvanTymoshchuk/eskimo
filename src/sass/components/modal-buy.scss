@@ -1,0 +1,309 @@
+.header-modal {
+  padding: 28px 29px 28px 28px;
+  background-color: $inverse-color;
+
+  @include tablet {
+    padding: 32px 54px;
+  }
+
+  &__title {
+    font-family: 'Seymour One';
+    margin-bottom: 83px;
+    text-align: center;
+    color: $primary-text-color;
+
+    @include tablet {
+      font-size: 20;
+      line-height: 1.4;
+      margin-bottom: 103px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 84px;
+    margin-bottom: 31px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__product {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 21px;
+    width: 132px;
+    height: 136px;
+    border: solid 2px;
+    border-radius: 10px;
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    font-style: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+      height: 135px;
+    }
+  }
+
+  &__checkbox {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__checkbox:checked + .icecream {
+    background-color: #aec6a5;
+  }
+
+  &__checkbox:checked + .icecoffe {
+    background-color: #efd478;
+  }
+
+  &__checkbox:checked + .milkshake {
+    background-color: #d6936d;
+  }
+}
+
+.header-modal.modal {
+  height: 100%;
+  max-height: 991px;
+
+  @include tablet {
+    max-width: 568px;
+    max-height: 644px;
+  }
+}
+
+.modal.active {
+  overflow-y: scroll;
+}
+
+.icecream {
+  border-color: #96af8c;
+}
+
+.icecream::before {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+}
+
+.icecream::after {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background-image: url(../images/products/ice-cream-modal.png);
+
+  @include retina {
+    background-image: url(../images/products/ice-cream-modal-2x.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.icecoffe {
+  border-color: yellow;
+}
+
+.icecoffe::before {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+
+.icecoffe::after {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background-image: url(../images/products/ice-coffee-modal.png);
+
+  @include retina {
+    background-image: url(../images/products/ice-coffee-modal-2x.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.milkshake {
+  border-color: $focus-color-text;
+}
+
+.milkshake::before {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+}
+
+.milkshake::after {
+  content: '';
+  position: absolute;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: -7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background-image: url(../images/products/milkshekes-modal.png);
+
+  @include retina {
+    background-image: url(../images/products/milkshekes-modal-2x.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.header-modal__form {
+  color: black;
+}
+
+.header-modal__input {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+
+  outline: none;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: solid 1px yellow;
+  border-radius: 10px;
+
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  color: black;
+
+  @include tablet {
+    width: 368px;
+    height: 42px;
+    padding: 11px 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.header-modal__input::placeholder {
+  color: black;
+}
+
+.header-modal__input:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+.header-modal__comment {
+  resize: none;
+  height: 65px;
+  margin-bottom: 26px;
+
+  @include tablet {
+    height: 84px;
+    margin-bottom: 32px;
+  }
+}
+
+.submit-btn {
+  width: 114px;
+  height: 42px;
+  color: $primary-text-color;
+  cursor: pointer;
+  text-align: center;
+  background: $bg-color-button;
+  border: hidden;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: width 2s, height 2s, transform 2s;
+  display: flex;
+  box-shadow: 0 4px 4px #00000026;
+
+  &:hover {
+    background: $bg-green-button;
+    color: $primary-text-color;
+    transform: rotate(360deg);
+  }
+
+  &:focus {
+    background: $bg-green-button;
+    color: $primary-white-color;
+    transition-property: primary-text-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:disabled {
+    background-color: $color-button-disable;
+  }
+}
