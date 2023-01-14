@@ -113,8 +113,8 @@
     hsla(0, 0%, 100%, 0) 10%,
     hsl(0, 0%, 30%) 20%
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   animation: shine 6s infinite linear;
 
   @include mobile {
@@ -165,7 +165,7 @@
     background-position: 600px;
   }
   100% {
-    background-position: 650px;
+    background-position: 600px;
   }
 }
 
