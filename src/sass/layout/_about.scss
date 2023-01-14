@@ -22,13 +22,9 @@
   @include desktop {
     font-size: 30px;
   }
-  @media screen and (min-width: 480px) and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .about_strong {
-  display: block;
   font-family: 'Seymour One';
   font-weight: 400;
   font-size: 30px;
@@ -52,52 +48,18 @@
     letter-spacing: 0.06;
     width: 481px;
   }
-
-  @media screen and (min-width: 480px) and (max-width: 768px) {
-    display: none;
-  }
 }
-.about_strong_two {
-  display: block;
-  font-family: 'Seymour One';
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.26;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200;
-  @media screen and (min-width: 769px) {
-    display: none;
+.about-wrap__title {
+  display: flex;
+  gap: 12px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
   }
-  @media screen and (max-width: 479px) {
-    display: none;
-  }
-}
-.about_h_two {
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  color: $primary-white-color;
-
-  margin-left: auto;
-  margin-right: auto;
   @include tablet {
-    display: none;
-  }
-  @media screen and (max-width: 479px) {
-    display: none;
+    flex-direction: column;
   }
 }
+
 .about_div {
   display: flex;
   justify-content: center;
@@ -111,18 +73,18 @@
     justify-content: space-between;
   }
 }
-.about_picture_div {
-  margin-top: 54px;
+// .about_picture_div {
+//   margin-top: 54px;
 
-  @include tablet {
-    margin-top: 98px;
-    margin-bottom: 60px;
-  }
-  @include desktop {
-    margin-top: 121px;
-    margin-bottom: 60px;
-  }
-}
+//   @include tablet {
+//     margin-top: 98px;
+//     margin-bottom: 60px;
+//   }
+//   @include desktop {
+//     margin-top: 121px;
+//     margin-bottom: 60px;
+//   }
+// }
 .about_picture {
   background: linear-gradient(
       0deg,
@@ -220,4 +182,3 @@
     border-color: $bg-green-button;
   }
 }
-
