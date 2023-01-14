@@ -11,7 +11,6 @@
     margin-bottom: 83px;
     text-align: center;
     color: $primary-text-color;
-   
 
     @include tablet {
       font-size: 20;
@@ -76,8 +75,6 @@
   }
 }
 
-
-
 .header-modal.modal {
   height: 100%;
   max-height: 991px;
@@ -126,12 +123,10 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 
-  background-image: url(../images/products/ice-cream-mob-2x.png);
+  background-image: url(../images/products/ice-cream-modal.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/ice-cream-mob-2x.png);
+  @include retina {
+    background-image: url(../images/products/ice-cream-modal-2x.png);
     background-position: center;
     background-size: cover;
   }
@@ -171,12 +166,10 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 
-  background-image: url(../images/products/ice-cream-mob-2x.png);
+  background-image: url(../images/products/ice-coffee-modal.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/ice-cream-mob-2x.png);
+  @include retina {
+    background-image: url(../images/products/ice-coffee-modal-2x.png);
     background-position: center;
     background-size: cover;
   }
@@ -216,12 +209,10 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 
-  background-image: url(../images/products/ice-cream-mob-2x.png);
+  background-image: url(../images/products/milkshekes-modal.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/ice-cream-mob-2x.png);
+  @include retina {
+    background-image: url(../images/products/milkshekes-modal-2x.png);
     background-position: center;
     background-size: cover;
   }
