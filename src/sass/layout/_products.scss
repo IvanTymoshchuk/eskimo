@@ -96,6 +96,7 @@
   display: flex;
   position: relative;
   text-align: center;
+  border-radius: 24px;
   @include mobile {
     padding: 123px 25px 16px;
     max-width: 250px;
@@ -103,7 +104,7 @@
   }
   @include tablet {
     padding: 108px 26px 16px;
-    max-width: 250px;
+    max-width: 224px;
     height: 428px;
   }
   @include desktop {
@@ -126,135 +127,140 @@
       height: 300px;
     }
   }
-  @include mobile {
-    max-width: 250px;
-  }
-  @include tablet {
-    max-width: 224px;
-  }
-  @include desktop {
-    max-width: 370px;
-  }
-}
-
-.products-frst {
-  background: #aec6a5;
-  border-radius: 24px;
-  &:before {
-    background: linear-gradient(
-        0deg,
-        rgba(156, 190, 143, 0.7),
-        rgba(156, 190, 143, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
-  }
-}
-
-.products-scnd {
-  background: #efd478;
-  border-radius: 24px;
-  &:before {
-    background: linear-gradient(
-        0deg,
-        rgba(248, 210, 78, 0.7),
-        rgba(248, 210, 78, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
-  }
-}
-
-.products-lst {
-  background: #d6936d;
-  border-radius: 24px;
-  &:before {
-    background: linear-gradient(
-        0deg,
-        rgba(213, 117, 63, 0.7),
-        rgba(213, 117, 63, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.products__item:after {
-  content: '';
-  width: 200px;
-  height: 200px;
-  top: -110px;
-  left: 50%;
-  background-position: 50%;
-  background-size: contain;
-  position: absolute;
-  transform: translate(-50%);
-  @include desktop {
-    width: 300px;
-    height: 300px;
-    top: -215px;
-  }
-}
-
-.products-frst:after {
-  background-image: url('../images/products/ice-cream-mob.png');
-  @include retina {
-    background-image: url('../images/products/ice-cream-mob-2x.png');
-  }
-  @include tablet {
-    background-image: url('../images/products/ice-cream-modal.png');
-
-    @include retina {
-      background-image: url('../images/products/ice-cream-modal-2x.png');
+  &:after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    top: -110px;
+    left: 50%;
+    background-position: 50%;
+    background-size: contain;
+    position: absolute;
+    transform: translate(-50%);
+    @include desktop {
+      width: 300px;
+      height: 300px;
+      top: -215px;
     }
   }
-  @include desktop {
-    background-image: url('../images/products/ice-cream-desktop.png');
-
-    @include retina {
-      background-image: url('../images/products/ice-cream-desktop-2x.png');
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    box-shadow: 0 5.40397px 20.2649px #00000040;
+    &:after,
+    &:hover:before {
+      animation: bounce 2s ease infinite;
     }
   }
-}
-
-.products-scnd:after {
-  background-image: url('../images/products/ice-coffee-mob.png');
-  @include retina {
-    background-image: url('../images/products/ice-coffee-mob-2x.png');
-  }
-  @include tablet {
-    background-image: url('../images/products/ice-coffee-modal.png');
-
-    @include retina {
-      background-image: url('../images/products/ice-coffee-modal-2x.png');
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translate(-50%, 0);
+    }
+    40% {
+      transform: translate(-50%, 30px);
+    }
+    60% {
+      transform: translate(-50%, 15px);
     }
   }
-  @include desktop {
-    background-image: url('../images/products/ice-coffee-desktop.png');
+  &:nth-child(1) {
+    background: #aec6a5;
+    &:before {
+      background: linear-gradient(
+          0deg,
+          rgba(156, 190, 143, 0.7),
+          rgba(156, 190, 143, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    }
+    &:after {
+      background-image: url('../images/products/ice-cream-mob.png');
+      @include retina {
+        background-image: url('../images/products/ice-cream-mob-2x.png');
+      }
+      @include tablet {
+        background-image: url('../images/products/ice-cream-modal.png');
 
-    @include retina {
-      background-image: url('../images/products/ice-coffee-desktop-2x.png');
+        @include retina {
+          background-image: url('../images/products/ice-cream-modal-2x.png');
+        }
+      }
+      @include desktop {
+        background-image: url('../images/products/ice-cream-desktop.png');
+
+        @include retina {
+          background-image: url('../images/products/ice-cream-desktop-2x.png');
+        }
+      }
     }
   }
-}
+  &:nth-child(2) {
+    background: #efd478;
+    &:before {
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+    }
+    &:after {
+      background-image: url('../images/products/ice-coffee-mob.png');
+      @include retina {
+        background-image: url('../images/products/ice-coffee-mob-2x.png');
+      }
+      @include tablet {
+        background-image: url('../images/products/ice-coffee-modal.png');
 
-.products-lst:after {
-  background-image: url('../images/products/milkshekes-mob.png');
-  @include retina {
-    background-image: url('../images/products/milkshekes-mob-2x.png');
-  }
-  @include tablet {
-    background-image: url('../images/products/milkshekes-modal.png');
+        @include retina {
+          background-image: url('../images/products/ice-coffee-modal-2x.png');
+        }
+      }
+      @include desktop {
+        background-image: url('../images/products/ice-coffee-desktop.png');
 
-    @include retina {
-      background-image: url('../images/products/milkshekes-modal-2x.png');
+        @include retina {
+          background-image: url('../images/products/ice-coffee-desktop-2x.png');
+        }
+      }
     }
   }
-  @include desktop {
-    background-image: url('../images/products/milkshekes-desktop.png');
+  &:nth-child(3) {
+    background: #d6936d;
+    &:before {
+      background: linear-gradient(
+          0deg,
+          rgba(213, 117, 63, 0.7),
+          rgba(213, 117, 63, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+    }
+    &:after {
+      background-image: url('../images/products/milkshekes-mob.png');
+      @include retina {
+        background-image: url('../images/products/milkshekes-mob-2x.png');
+      }
+      @include tablet {
+        background-image: url('../images/products/milkshekes-modal.png');
 
-    @include retina {
-      background-image: url('../images/products/milkshekes-desktop-2x.png');
+        @include retina {
+          background-image: url('../images/products/milkshekes-modal-2x.png');
+        }
+      }
+      @include desktop {
+        background-image: url('../images/products/milkshekes-desktop.png');
+
+        @include retina {
+          background-image: url('../images/products/milkshekes-desktop-2x.png');
+        }
+      }
     }
   }
 }
@@ -296,10 +302,26 @@
   right: 0;
   background: none;
   border: none;
+  overflow: hidden;
   @include tablet {
     bottom: 12px;
   }
   @include desktop {
     bottom: 60px;
+  }
+  &:hover .products-menu__icon {
+    animation: 1.5s cubic-bezier(0.48, 0.23, 0.51, 1.2) infinite slidein;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(40px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }
