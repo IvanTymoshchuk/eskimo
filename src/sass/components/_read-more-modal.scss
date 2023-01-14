@@ -1,65 +1,61 @@
-.modal{
-    border: 2px solid $bg-color-button;
-    border-radius: 10px;
-    padding: 28px;
-    max-width: 75vw;
-    
-    @media screen and (min-width: 480px)
-    {
-        max-width: 400px;
-    }
+.modal {
+  border: 2px solid $bg-color-button;
+  border-radius: 10px;
+  padding: 28px;
+  max-width: 100%;
 
-    @media screen and (min-width: 768px)
-     {
-        max-width: 568px;
-        padding: 32px 60px;
- }
+  @media screen and (min-width: 480px) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 568px;
+    padding: 32px 60px;
+  }
 }
 
-.modal__close{
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 12px;
-    background:transparent;
-    border: none;
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 12px;
+  background: transparent;
+  border: none;
 }
 
-.modal__icon{
-    fill: $primary-text-color;
+.modal__icon {
+  fill: $primary-text-color;
 }
 
-.modal__titlle{
-    font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
-    color: $primary-text-color;
-   
-    margin-bottom: 32px;
-    align-items: center;
-    text-align: center;
-    
+.modal__titlle {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $primary-text-color;
+
+  margin-bottom: 32px;
+  align-items: center;
+  text-align: center;
 }
 
-.modal__video{
-    width: 100%;
-    height: 205px;
-    margin-bottom: 32px;
-    border-radius: 10px;
+.modal__video {
+  width: 100%;
+  height: 205px;
+  margin-bottom: 32px;
+  border-radius: 10px;
 }
 
-.modal__text{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.22; 
-    color: $primary-text-color;
-    
-    align-items:center;
-    text-align: start;
-    
+.modal__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.22;
+  color: $primary-text-color;
+
+  align-items: center;
+  text-align: start;
 }
