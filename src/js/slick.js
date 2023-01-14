@@ -9,10 +9,13 @@
 $('.one-time').slick({
   dots: true,
   infinite: true,
-  speed: 300,
+  speed: 500,
   slidesToShow: 1,
   arrows: false,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  cssEase: 'linear',
+  autoplay: true,
+  autoplaySpeed: 5000
 });
 
 $('.gallery-slick').slick({
