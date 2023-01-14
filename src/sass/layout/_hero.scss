@@ -172,11 +172,12 @@
     margin-bottom: 24px;
   }
 }
+
 .hero__link-menu {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
   @include desktop {
-    margin-left: 25px;
+    margin-left: 40px;
   }
 }
 
@@ -220,12 +221,12 @@
   }
 }
 
-.arrow {
+.hero__link-arrow{
   transform: rotate(-90deg);
   cursor: pointer;
 }
 
-.arrow span {
+.arrow {
   display: block;
   transform: rotate(45deg);
   margin: -10px;
@@ -245,11 +246,11 @@
   }
 }
 
-.arrow span:nth-child(2) {
+.arrow:nth-child(2) {
   animation-delay: -0.2s;
 }
 
-.arrow span:nth-child(3) {
+.arrow:nth-child(3) {
   animation-delay: -0.4s;
 }
 
