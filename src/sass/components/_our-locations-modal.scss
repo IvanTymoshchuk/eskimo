@@ -1,17 +1,16 @@
 .modal.modal-our {
+  
   @include mobile {
     width: 100%;
   }
 
-  @media screen and (max-width: 768px) and (min-width: 480px){
-    height: 449px;
-  }
-
   @include tablet {
     width: 568px;
-    height: 449px;
+    padding: 32px 60px;
   }
 }
+
+
 
 .modal__map-btn {
   font-family: 'Montserrat';
@@ -19,6 +18,8 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
+
+  cursor: pointer;
   min-width: 145px;
   display: inline-block;
   padding: 12px 24px;
@@ -30,16 +31,41 @@
   text-align: center;
   text-decoration: none;
   color: $primary-text-color;
-
-  @media screen and (max-width: 480px) {
-      
-    margin-top: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: color;
+  transition: width 2s, height 2s, transform 2s;
+  
+  &:hover {
+    background: $bg-green-button;
+    color: $primary-text-color;
+    transition-property:  color;
+    transition: width 2s, height 2s, transform 2s;
+    transform: rotate(360deg);
+    
   }
-}
+
+  &:focus {
+    background: $bg-green-button;
+    color: $primary-white-color;
+    transition-property: primary-text-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+
+    @media screen and (max-width: 480px) {
+      margin-top: 24px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }   
+  }
+
 
 .modal__map {
   width: 100%;
-  height: 205px;
+  height: 260px;
   margin-bottom: 32px;
   border-radius: 10px;
 
