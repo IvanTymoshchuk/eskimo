@@ -1,10 +1,8 @@
 .advantages__section {
-  padding-top: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 32px;
 
-  @include mobile {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @include tablet {
+    padding-bottom: 41px;
   }
 
   @include desktop {
@@ -28,12 +26,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
 
-  @media screen and (max-width: 481px) {
-    gap: 16px;
+  @media screen and (max-width: 480px) {
+
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  @include mobile {
+
+
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+  }
+
+  @include tablet {
+    gap: 0px;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
   }
 }
 
@@ -50,7 +67,7 @@
   background-size: 36px 36px;
   background-position: center;
   background-color: $bg-color-button;
-
+  
   animation-name: stretch;
   animation-duration: 2s;
   animation-timing-function: ease-out;
@@ -61,6 +78,7 @@
   @include tablet {
     margin-bottom: 32px;
   }
+
   @include desktop {
     margin-bottom: 40px;
   }
@@ -82,6 +100,7 @@
     }
   }
 }
+
 .advantages__item-cow::before {
   background-image: url(../images/advantages/cow-icon.png);
 
@@ -89,6 +108,7 @@
     background-image: url(../images/advantages/cow-icon-2x.png);
   }
 }
+
 .advantages__item-kg::before {
   background-image: url(../images/advantages/weight-icon.png);
 
@@ -96,6 +116,7 @@
     background-image: url(../images/advantages/weight-icon-2x.png);
   }
 }
+
 .advantages__ice-cream::before {
   background-image: url(../images/advantages/ice-cream-icon.png);
 
@@ -105,18 +126,18 @@
 }
 
 .advantages__numbers {
-  font-style: normal;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.22;
 
-  text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-align: center;
   color: $primary-white-color;
 
   @include tablet {
-    width: 152px;
+
     font-size: 48px;
     line-height: 1.23;
     margin-bottom: 12px;
@@ -131,7 +152,7 @@
 .advantages__text {
   width: 230px;
 
-  font-style: normal;
+
   font-weight: 700;
   font-size: 12px;
   line-height: 1.7;
