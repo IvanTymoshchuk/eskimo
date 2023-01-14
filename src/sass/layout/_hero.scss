@@ -184,12 +184,17 @@
   position: absolute;
   bottom: 0;
   right: 20px;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
   @include tablet {
     right: 92px;
   }
   @include desktop {
     left: 652px;
     bottom: 0;
+  }
+
+  &:hover {
+    transform: rotate(3deg);
   }
 }
 .hero__dots {
@@ -205,6 +210,13 @@
   @include tablet {
     width: 100%;
     left: 0;
+  }
+}
+
+.plate-hero {
+  transition: width 1s, height 1s, transform 1s;
+  &:hover {
+    transform: rotate(360deg);
   }
 }
 
