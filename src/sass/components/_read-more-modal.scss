@@ -1,17 +1,19 @@
-.modal {
+.modal  {
   border: 2px solid $bg-color-button;
   border-radius: 10px;
   padding: 28px;
-  max-width: 100%;
+  max-width: 90%;
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 400px;
   }
-
-  @media screen and (min-width: 768px) {
+  
+  @include tablet{
     max-width: 568px;
     padding: 32px 60px;
   }
+
+  
 }
 
 .modal__close {
@@ -19,7 +21,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  margin: 12px;
   background: transparent;
   border: none;
 }
@@ -35,10 +36,32 @@
     font-size: 20px;
     line-height: 1.4;
     color: $primary-text-color;
+
+    background: linear-gradient(
+    to right,
+    hsla(0, 0%, 30%, 0.651) 0,
+    hsla(0, 0%, 100%, 0) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s infinite linear;
    
     margin-bottom: 32px;
     align-items: center;
     text-align: center;
+
+    @keyframes shine {
+      0% {
+        background-position: 0;
+      }
+      60% {
+        background-position: 600px;
+      }
+      100% {
+        background-position: 600px;
+      }
+    }
 
     @media screen and (max-width: 480px) {
         font-size: 16px;
@@ -69,7 +92,10 @@
     
     align-items:center;
     text-align: start;
-    
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
 }
 
 
