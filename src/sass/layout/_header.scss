@@ -1,208 +1,233 @@
 .header {
-    margin: 0 auto;
-    max-width: 480px;
-    padding: 14px 20px 40px 20px;
-    @media screen and (min-width:768px) {
-        padding: 20px 32px 14px 32px;
-        max-width: 768px;
-    }
-    @media screen and (min-width:1200px) {
-        padding: 8px 16px 45px 16px;
-        max-width: 1200px;
-    }
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 14px 20px 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  @include tablet {
+    padding: 20px 32px 14px 32px;
+    max-width: 768px;
+    align-items: center;
+  }
+  @include desktop {
+    padding: 8px 16px 45px 16px;
+    max-width: 1200px;
+    align-items: flex-end;
+  }
 }
-
-.header__nav {
-    display: flex;
-    justify-content: space-between;
-    @media screen and (min-width:1200px) {
-            align-items: flex-end;
-    }
-    
-}
-// .hero__ice-wrap{
-//     display: flex;
-// }
-.header__list {
-    display: flex;
-    gap: 28px;
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
-}
-.header__mob-link{
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    color: $primary-white-color;
-    text-decoration: none;
-    @media screen and (min-width:768px) {
-            font-size: 48px;
-            line-height: 59px;
-        }
-}
-.header__wrapper{
+.header__wrapper {
+  @include tablet {
     display: flex;
     align-items: center;
     gap: 32px;
-    @media screen and (min-width:1200px) {
-        gap: 204px;
-    }
+  }
+  @include desktop {
+    gap: 204px;
+  }
 }
-.header__logo {
-    margin: 0;
-    padding: 0;
-    width: 48px;
-    height: 44px;
-    z-index: 2;
-    @media screen and (min-width:1200px) {
-        width: 60px;
-        height: 65px;
-    }
-    
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  @include desktop {
+    align-items: flex-end;
+  }
 }
 
-.header__nav-button {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    color: #FCFCFC;
-    border: none;
-    background: none;
-    @include transition(color);
-    &:hover,
-    &:focus {
-        color: #F8D24E;
-    }
+.header__list {
+  display: flex;
+  gap: 28px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
-.header__mob-btn{
-    display: flex;
-    background: none;
-    border: none;
-    @media screen and (min-width:1200px) {
-        display: none;
-    }
+.header__mob-link {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: $primary-white-color;
+  text-decoration: none;
+  @include transition(color);
+  &:focus {
+    color: $primary-text-color;
+  }
+  @include tablet {
+    font-size: 48px;
+    line-height: 59px;
+  }
 }
-.header__mob-icon{
-    width: 32px;
-    height: 32px;
+.header__logo {
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 44px;
+  @include desktop {
+    width: 60px;
+    height: 65px;
+  }
+}
+.header__mob-logo {
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 44px;
+  position: absolute;
+  top: 12;
+  left: 32;
+  @include mobile {
+    top: 20;
+    left: 20;
+  }
+  @include tablet {
+    left: 32;
+  }
+}
+.header__nav-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #fcfcfc;
+  border: none;
+  background: none;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: #f8d24e;
+  }
+}
+.header__mob-btn {
+  display: flex;
+  background: none;
+  border: none;
+  @include desktop {
+    display: none;
+  }
+}
+.header__mob-icon {
+  width: 32px;
+  height: 32px;
 }
 .header__button {
-    background-color: #F8D24E;
+  background-color: #f8d24e;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  @include transitionX3(background-color, color, fill);
+  &:hover {
+    background-color: #0a8817;
     color: #000000;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 12px 36px;
-    display: flex;
-    align-items: center;
-    @include transitionX3(background-color, color, fill);
-    &:hover {
-        background-color: #0A8817;
-        color: #000000;
-    }
-    &:focus {
-        background-color: #0A8817;
-        color: #FCFCFC;
-    }
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  }
+  &:focus {
+    background-color: #0a8817;
+    color: #fcfcfc;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .header__bth-icon {
-    width: 12px;
-    height: 12px;
-    margin-left: 4px;
-    fill: currentColor;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  fill: currentColor;
 }
-
 
 .header__mob-menu {
-    z-index: 1;
-    position: fixed;
-    background-color: #84A178;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-    padding-top: 100px;
-    transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
-        overflow-y: scroll;
-    @media screen and (min-width:480px) {
+  z-index: 3;
+  position: fixed;
+  background-color: #84a178;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  overflow-y: scroll;
+  @include mobile {
     padding-top: 104px;
-        }
-    @media screen and (min-width:768px) {
+    padding-bottom: 88px;
+  }
+  @include tablet {
     padding-top: 140px;
-    }
+    padding-bottom: 112px;
+  }
 }
-@media(min-width:1200px) {
-    .header__mob-menu {
-        display: none;
-    }
+@media (min-width: 1200px) {
+  .header__mob-menu {
+    display: none;
+  }
 }
 .header__mob-menu.is-open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
-.header__btn-close{
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: none;
-    position: absolute;
-    right: 20px;
-    top: 16px;
-    fill: $primary-white-color;    
-    @media screen and (min-width:480px) {
-        top: 20px;
-    }
-    @media screen and (min-width:768px) {
-        right: 32px;
-        top: 32px;
-    }
+.header__btn-close {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  fill: $primary-white-color;
+  @include mobile {
+    top: 20px;
+  }
+  @include tablet {
+    right: 32px;
+    top: 32px;
+  }
+  @include transition(fill);
+  &:focus {
+    fill: $primary-text-color;
+  }
 }
-.header__icon-close{
-    width: 100%;
-    height: 100%;
+.header__icon-close {
+  width: 32px;
+  height: 32px;
+
+  &:focus {
+    fill: currentColor;
+  }
 }
-.header__mob-list{
-            margin-bottom:110px ;
-    @media screen and (min-width:480px) {
-            margin-bottom: 114px;
-        }
-    @media screen and (min-width:768px) {
-            margin-bottom: 140px;
-    }
+
+.header__mob-block {
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
-.header__mob-block:not(:last-child){
-    margin-bottom: 32px;
-    @media screen and (min-width:768px) {
-        margin-bottom: 40px;
-    }
-}
-.header__tel-button{
-    background-color: #F8D24E;
+.header__tel-button {
+  display: flex;
+  max-width: 152px;
+  background-color: #f8d24e;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 36px;
+  margin: 0 auto;
+  align-items: center;
+  &:hover {
+    background-color: #0a8817;
     color: #000000;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 12px 36px;
+  }
 
-    &:hover {
-        background-color: #0A8817;
-        color: #000000;
-    }
-
-    &:focus {
-        background-color: #0A8817;
-        color: #FCFCFC;
-    }
+  &:focus {
+    background-color: #0a8817;
+    color: #fcfcfc;
+  }
 }

@@ -2,11 +2,11 @@
   padding: 0 20px;
   margin: 0 auto;
   max-width: 480px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 0 32px;
     max-width: 768px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding: 0 16px;
     max-width: 1200px;
   }
@@ -16,14 +16,14 @@
   display: flex;
 }
 .hero__content {
-  margin-bottom: 236px;
-  @media screen and (min-width: 480px) {
+  margin-bottom: 250px;
+  @include mobile {
     margin-bottom: 150px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-bottom: 12px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 65px;
   }
 }
@@ -35,7 +35,7 @@
   }
 }
 .hero__tittle {
-  width: 247px;
+  max-width: 247px;
   font-family: 'Seymour One';
   font-weight: 400;
   font-size: 26px;
@@ -44,13 +44,13 @@
   text-transform: uppercase;
   color: $primary-white-color;
   margin-bottom: 32px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-bottom: 24px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 38px;
     line-height: 48px;
-    width: 367px;
+    max-width: 367px;
     margin-bottom: 28px;
   }
 }
@@ -61,10 +61,12 @@
   }
 }
 .hero__btn-list {
-  @media screen and (min-width: 768px) {
+  display: inline-flex;
+  align-items: center;
+  @include tablet {
     margin-bottom: 18px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 45px;
   }
 }
@@ -79,7 +81,7 @@
   border: 2px solid $bg-color-button;
   margin-right: 12px;
   @include transitionX2(border, color);
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 14px;
     line-height: 18px;
     padding: 12px 34px;
@@ -102,7 +104,7 @@
   border: none;
   color: $bg-color-button;
   @include transition(color);
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 14px;
     line-height: 18px;
   }
@@ -117,12 +119,15 @@
   margin-top: 28px;
   margin-left: auto;
   text-align: right;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-top: 53px;
   }
   @media screen and (max-width: 767px) {
     display: none;
   }
+}
+.hero__block:not(:last-child) {
+  margin-bottom: 16px;
 }
 .hero__num {
   font-weight: 900;
@@ -140,13 +145,13 @@
   color: $fill-icon;
 }
 .hero__wrapper-info {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 139px;
     margin-left: 32px;
     margin-top: 12px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-left: 16px;
     margin-top: 27px;
     width: 200px;
@@ -156,11 +161,11 @@
   font-weight: 400;
   line-height: 140%;
   color: $primary-white-color;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 12px;
     margin-bottom: 12px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 14px;
     margin-bottom: 24px;
   }
@@ -178,14 +183,11 @@
 .hero_ice-cream {
   position: absolute;
   bottom: 0;
-  left: 83px;
-  @media screen and (min-width: 480px) {
-    left: 242px;
+  right: 20px;
+  @include tablet {
+    right: 92px;
   }
-  @media screen and (min-width: 767px) {
-    left: 408px;
-  }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     left: 652px;
     bottom: 0;
   }
@@ -194,11 +196,14 @@
   position: absolute;
   bottom: 0;
   z-index: -1;
-  @media screen and (min-width: 768px) {
-    width: 100%;
-    left: 0;
+  right: 0;
+  @media screen and (max-width: 479px) {
   }
   @media screen and (min-width: 480px) and (max-width: 767px) {
     right: 0;
+  }
+  @include tablet {
+    width: 100%;
+    left: 0;
   }
 }

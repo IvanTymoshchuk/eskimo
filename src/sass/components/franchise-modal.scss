@@ -20,6 +20,7 @@
 .modal.modal-franchise {
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
 }
 
 /* Стили для активных классов подложки и окна */
@@ -32,9 +33,12 @@
 .modal.modal-franchise.active {
   opacity: 1;
   visibility: visible;
+  overflow: hidden;
+
   transform: translate(-50%, -50%);
   position: fixed;
-  width: 100%;
+  width: 95%;
+  height: 674px;
   top: 50%;
   left: 50%;
   z-index: 30;
@@ -103,6 +107,16 @@
 
   color: $primary-text-color;
 
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 30%, 0.651) 0,
+    hsla(0, 0%, 100%, 0) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s infinite linear;
+
   @include mobile {
     margin-bottom: 25px;
 
@@ -140,6 +154,18 @@
     display: flex;
     align-items: center;
     text-align: center;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
   }
 }
 
@@ -220,10 +246,11 @@
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid $bg-color-body;
   border-radius: 10px;
-  transition-property: $bg-color-body;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-property: $bg-color-body;
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+  transition: width 1s;
 
   @include tablet {
     width: 368px;
@@ -240,15 +267,29 @@
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid $focus-color-text;
   border-radius: 10px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mobile {
+    width: 350px;
+    height: 45px;
+  }
+
+  @include tablet {
+    width: 395px;
+  }
+
+  @include desktop {
+    width: 400px;
+  }
+
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input__name:focus ~ .form-name__icon {
-  fill: $primary-text-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+// .form-input__name:focus ~ .form-name__icon {
+//   fill: $primary-text-color;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
 textarea {
   resize: none;
@@ -261,8 +302,9 @@ textarea {
   border: 1px solid $bg-color-body;
   border-radius: 10px;
   transition-property: $inverse-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 2s;
 
   @include mobile {
     max-width: 100%;
@@ -287,8 +329,20 @@ textarea:focus {
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid $focus-color-text;
   border-radius: 10px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mobile {
+    width: 350px;
+  }
+
+  @include tablet {
+    width: 400px;
+  }
+
+  @include desktop {
+    width: 400px;
+  }
 }
 
 .form-checkbox {
@@ -348,16 +402,19 @@ textarea:focus {
   border: hidden;
   cursor: pointer;
   text-align: center;
-  transition-property: backround, color;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: width 2s, height 2s, transform 2s;
+  // transition-property: backround, color;
+  // transition-duration: 300ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background: $bg-green-button;
     color: $primary-text-color;
-    transition-property: background, color;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-property: background, color;
+    // transition-duration: 300ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(360deg);
   }
 
   &:focus {
