@@ -119,9 +119,7 @@
 
   @include mobile {
     margin-bottom: 25px;
-
     font-size: 20px;
-    line-height: 1.4;
     width: 322px;
     height: 84px;
     display: flex;
@@ -135,7 +133,6 @@
     margin-bottom: 25px;
 
     font-size: 20px;
-    line-height: 1.4;
     width: 322px;
     height: 84px;
     display: flex;
@@ -148,7 +145,6 @@
   @include desktop {
     font-weight: 400;
     font-size: 20px;
-    line-height: 1.4;
     width: 322px;
     height: 84px;
     display: flex;
@@ -174,7 +170,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.4;
   text-align: left;
   margin-bottom: 24px;
   color: $primary-text-color;
@@ -189,7 +184,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.4;
     padding: 0 20;
   }
 
@@ -199,7 +193,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.4;
     padding: 0 20;
   }
 }
@@ -356,7 +349,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 24px;
+  line-height: 1.5;
 
   @media screen and(max-width:479px) {
     line-height: 12px;

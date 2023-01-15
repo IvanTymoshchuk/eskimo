@@ -43,7 +43,7 @@
 .header__mob-link {
   font-weight: 700;
   font-size: 32px;
-  line-height: 39px;
+  line-height: 1.21;
   color: $primary-white-color;
   text-decoration: none;
   @include transition(color);
@@ -52,7 +52,7 @@
   }
   @include tablet {
     font-size: 48px;
-    line-height: 59px;
+    line-height: 1.22;
   }
 }
 .header__logo {
@@ -84,7 +84,7 @@
 .header__nav-link {
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-decoration: none;
   color: #fcfcfc;
   border: none;
@@ -114,7 +114,7 @@
   border-radius: 10px;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.21;
   padding: 12px 36px;
   display: flex;
   align-items: center;
