@@ -1,4 +1,6 @@
 <header class="header">
+  <div class="header__wrapper container">
+    <nav class="header__nav">
   <a href="#" class="header__logo">
     <picture>
       <source
@@ -24,20 +26,18 @@
       <img src="./images/hero-header/logo-mob.png" alt="логотип" />
     </picture>
   </a>
-  <div class="header__wrapper">
-    <nav class="header__nav">
-      <ul class="header__list">
+      <ul class="header__list list">
         <li class="header__block">
-          <a class="header__nav-link" href="./index.html">Home</a>
+          <a class="header__nav-link link" href="./index.html">Home</a>
         </li>
         <li class="header__block">
-          <a class="header__nav-link" href="#about">How it’s made?</a>
+          <a class="header__nav-link link" href="#about">How it’s made?</a>
         </li>
         <li class="header__block">
-          <a class="header__nav-link" href="#products">Our products</a>
+          <a class="header__nav-link link" href="#products">Our products</a>
         </li>
         <li class="header__block">
-          <a class="header__nav-link" href="#contacts">Contact</a>
+          <a class="header__nav-link link" href="#contacts">Contact</a>
         </li>
       </ul>
       <button type="button" class="menu-open" data-menu-open>
@@ -45,7 +45,7 @@
             <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
         </svg>
       </button>
-      <button type="button" class="button header-btn js-open-modal" data-modal="buy">Buy now 
+      <button type="button" class="button header-btn js-open-modal" data-modal="5">Buy now 
         <svg class="btn-arrow" width="12" height="12">
         <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
     </svg></button>
@@ -56,15 +56,6 @@
 <div class="mob-menu is-hidden" data-menu>
   <div class="menu-header">
     <a href="#">
-      <!-- <picture>
-        <source
-            srcset="./images/header/logo-tab.png 1x, ./images/header/logo-tab-2x.png 2x"
-            media="(min-width: 768px)">
-        <source
-            srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
-            media="(max-width: 767px)">
-        <img src="./images/header/logo-mob.png" alt="logo">
-    </picture> -->
               <picture>
             <source
               srcset="
@@ -95,16 +86,18 @@
       </svg>
     </button>
   </div>
-  <nav>
-    <ul class="menu-list">
-      <li class="menu-item"><a class="menu-link" href="#home">Home</a></li>
-      <li class="menu-item"><a class="menu-link" href="#about">How it’s made?</a></li>
-      <li class="menu-item"><a class="menu-link" href="#products">Our products</a></li>
-      <li class="menu-item"><a class="menu-link" href="#contacts">Contact</a></li>
+  <div class="menu__container">
+  <nav class="menu__navigation">
+    <ul class="menu-list list">
+      <li class="menu-item"><a class="menu-link link" href="#home">Home</a></li>
+      <li class="menu-item"><a class="menu-link link" href="#about">How it’s made?</a></li>
+      <li class="menu-item"><a class="menu-link link" href="#products">Our products</a></li>
+      <li class="menu-item"><a class="menu-link link" href="#contacts">Contact</a></li>
     </ul>
   </nav>
-  <button type="button" class="button menu-btn js-open-modal menu-buy" data-modal="buy">Buy now 
+  <button type="button" class="button menu-btn js-open-modal menu-buy" data-modal="5">Buy now 
     <svg class="btn-arrow" width="12" height="12">
     <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
 </svg></button>
+</div>
 </header>
