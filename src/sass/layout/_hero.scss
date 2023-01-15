@@ -160,9 +160,13 @@
   }
 
   @include desktop {
+        display: flex;
+    flex-direction: column;
     margin-left: 20px;
     margin-top: 27px;
-    width: 200px;
+    width: 110px;
+
+
   }
 }
 
