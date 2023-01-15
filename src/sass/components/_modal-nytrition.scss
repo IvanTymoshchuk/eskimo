@@ -44,23 +44,38 @@
   margin-bottom: 16px;
   width: 100%;
   min-height: 42px;
-  padding-top: 11px;
   padding-left: 16px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
+  transition: width 2s;
+}
+
+.field-group__input:focus {
+  @include mobile {
+    width: 350px;
+    height: 45px;
+  }
+
+  @include tablet {
+    width: 395px;
+  }
+
+  @include desktop {
+    width: 400px;
+  }
 }
 
 .field-group__input::placeholder {
   font-size: 14px;
 
-  color: $focus-color-text;
+  color: $primary-text-color;
 }
 
 .field-group__textarea::placeholder {
   font-size: 14px;
 
-  color: $focus-color-text;
+  color: $primary-text-color;
 }
 
 .field-group__textarea {
