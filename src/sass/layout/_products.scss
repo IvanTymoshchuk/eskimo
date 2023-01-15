@@ -309,19 +309,93 @@
   @include desktop {
     bottom: 60px;
   }
-  &:hover .products-menu__icon {
-    animation: 1.5s cubic-bezier(0.48, 0.23, 0.51, 1.2) infinite slidein;
+}
+
+/*------------------TOPPING START------------------------*/
+
+$blue: #17d3ff;
+$yellow: #d6ca91;
+$aqua: #99d1f1;
+
+$duration: 3000;
+
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
+
+.icon {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 32px;
+  position: relative;
+}
+
+.confetti {
+  position: relative;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $blue;
+  top: 0;
+  opacity: 0;
+
+  @for $i from 1 through 13 {
+    &:nth-child(#{$i}) {
+      left: $i * 7%;
+      transform: rotate(#{randomNum(-80, 80)}deg);
+      animation: makeItRain $duration * 1ms infinite ease-out;
+      animation-delay: #{randomNum(0, $duration * 0.5)}ms;
+      animation-duration: #{randomNum($duration * 0.7, $duration * 1.2)}ms;
+    }
   }
 
-  @keyframes slidein {
-    0% {
-      transform: translateX(0px);
-    }
-    50% {
-      transform: translateX(40px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
+  &:nth-child(odd) {
+    background: $yellow;
+  }
+
+  &:nth-child(even) {
+    z-index: 1;
+  }
+
+  &:nth-child(4n) {
+    width: 10px;
+    height: 10px;
+    animation-duration: $duration * 2ms;
+  }
+
+  &:nth-child(3n) {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    animation-duration: $duration * 2.5ms;
+    animation-delay: $duration * 1ms;
+  }
+
+  &:nth-child(4n-7) {
+    background: $aqua;
+    border-radius: 50%;
   }
 }
+
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(400px);
+  }
+}
+// ====================TOPPING END========================
