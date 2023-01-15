@@ -262,11 +262,31 @@
   text-align: left;
   color: black;
 
+  transition: width 1s;
+
   @include tablet {
     width: 368px;
     height: 42px;
     padding: 11px 16px;
     margin-bottom: 16px;
+  }
+}
+
+.header-modal__input:focus {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $focus-color-text;
+  border-radius: 10px;
+  @include mobile {
+    width: 350px;
+    height: 45px;
+  }
+
+  @include tablet {
+    width: 395px;
+  }
+
+  @include desktop {
+    width: 400px;
   }
 }
 
@@ -283,9 +303,26 @@
   height: 65px;
   margin-bottom: 26px;
 
+  transition: width 2s;
+
   @include tablet {
     height: 84px;
     margin-bottom: 32px;
+  }
+}
+
+.header-modal__comment:focus {
+  @include mobile {
+    width: 350px;
+  }
+
+  @include tablet {
+    width: 400px;
+  }
+
+  @include desktop {
+    width: 400px;
+    height: 95px;
   }
 }
 
