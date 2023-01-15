@@ -1,0 +1,108 @@
+<div class="modal modal-nutrition" data-modal="5">
+  <button class="modal__close js-modal-close">
+    <svg class="modal__icon">
+      <use href="/src/images/icons.svg/sprite.svg#icon-close-line"></use>
+    </svg>
+  </button>
+
+  <h2 class="modal__title">Chololate icecream</h2>
+  <div class="modal-picture__wrap">
+    <picture class="modal-picture">
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/products/ingredients-ice-cream-modal.png    1x,
+          ./images/products/ingredients-ice-cream-modal-2x.png 2x
+        "
+        media="(min-width: 480px)"
+      />
+      <img
+        class="products__picture"
+        src="./images/products/ingredients-ice-cream-modal.png"
+        alt="Ingredients Ice cream"
+      />
+    </picture>
+    <div class="back-shadow"></div>
+  </div>
+
+  <div class="nutrition-facts">
+    <ul class="nutrition-facts__list">
+      <li class="nutrition-facts__list-weight">320</li>
+      <li class="nutrition-facts__list-measure">kcal</li>
+    </ul>
+    <ul class="nutrition-facts__list">
+      <li class="nutrition-facts__list-weight">4g</li>
+      <li class="nutrition-facts__list-measure">Protein...</li>
+    </ul>
+    <ul class="nutrition-facts__list">
+      <li class="nutrition-facts__list-weight">8,2g</li>
+      <li class="nutrition-facts__list-measure">Fats</li>
+    </ul>
+    <ul class="nutrition-facts__list">
+      <li class="nutrition-facts__list-weight">40,4g</li>
+      <li class="nutrition-facts__list-measure">Carbs</li>
+    </ul>
+  </div>
+
+  <h3 class="ingredient-title">Ingredients</h3>
+  <div class="nutrition">
+    <ul class="nutrition-ingredients">
+      <li>Milk</li>
+      <li>100ml</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Belgian chocolate</li>
+      <li>20g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Cream</li>
+      <li>150 ml</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>MCocoa powder</li>
+      <li>30g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Sugar</li>
+      <li>40g</li>
+    </ul>
+    <ul class="nutrition-ingredients">
+      <li>Vanilla sugar</li>
+      <li>10g</li>
+    </ul>
+  </div>
+  <form class="form-modal-2">
+    <input
+      class="field-group__input"
+      type="text"
+      name="user-name"
+      id="user-name"
+      placeholder="Name"
+    />
+
+    <input class="field-group__input" type="tel" id="tel" placeholder="Phone" />
+
+    <textarea
+      id="comment"
+      class="field-group__textarea"
+      name="comment"
+      rows="10"
+      placeholder="Comment"
+    ></textarea>
+
+    <button class="field-group__send-button" type="submit">Submit</button>
+  </form>
+</div>
