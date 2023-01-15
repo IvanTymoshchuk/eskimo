@@ -169,6 +169,8 @@
   @include tablet {
     font-size: 12px;
     margin-bottom: 12px;
+    min-width: 180px;
+    transform: translateY(40px);
   }
   @include desktop {
     font-size: 14px;
