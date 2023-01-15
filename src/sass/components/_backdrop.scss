@@ -6,7 +6,6 @@
   visibility: hidden;
   overflow-y: scroll;
 
-
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +26,7 @@
 
   /*  Установаем ширину окна  */
   width: 100%;
-  max-width: 500px;
+  // max-width: 500px;
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -100,4 +99,3 @@
 // 3. <!-- Подложка под модальным окном -->
 
 // <div class="overlay js-overlay-modal"></div>
-

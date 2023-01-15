@@ -52,7 +52,7 @@
   padding: 31px;
 
   @include mobile {
-    width: 100%;
+    width: 95%;
     height: 660px;
   }
 
@@ -96,9 +96,9 @@
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
-  width: 221px;
 
+  font-size: 16px;
+  line-height: 1.5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,12 +117,10 @@
   animation: shine 6s infinite linear;
 
   @include mobile {
-    margin-bottom: 25px;
-
     font-size: 20px;
     line-height: 1.4;
     width: 322px;
-    height: 84px;
+
     display: flex;
     align-items: center;
     text-align: center;
@@ -131,12 +129,10 @@
   }
 
   @include tablet {
-    margin-bottom: 25px;
-
     font-size: 20px;
     line-height: 1.4;
     width: 322px;
-    height: 84px;
+
     display: flex;
     align-items: center;
     text-align: center;
@@ -179,25 +175,23 @@
   color: $primary-text-color;
 
   @include mobile {
-    margin-bottom: 24px;
+    font-size: 16px;
   }
 
   @include tablet {
-    margin-bottom: 32px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    font-size: 16px;
     line-height: 1.4;
     padding: 0 20;
+    letter-spacing: normal;
+    text-align: left;
   }
 
   @include desktop {
-    margin-bottom: 32px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    font-size: 16px;
     line-height: 1.4;
     padding: 0 20;
+    text-align: start;
+    letter-spacing: 0em;
   }
 }
 
@@ -207,7 +201,6 @@
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  letter-spacing: 0.01em;
 
   color: $primary-text-color;
 }
@@ -403,6 +396,20 @@ textarea:focus {
   // transition-property: backround, color;
   // transition-duration: 300ms;
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    width: 121px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  @include desktop {
+    width: 121px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
 
   &:hover {
     background: $bg-green-button;
