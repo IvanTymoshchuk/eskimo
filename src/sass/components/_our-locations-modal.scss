@@ -1,16 +1,3 @@
-.modal-our  {
-  
-  @include mobile {
-    width: 100%;
-  }
-
-  @include tablet {
-    width: 568px;
-    padding: 32px 60px;
-  }
-}
-
-
 
 .modal__map-btn {
   font-family: 'Montserrat';
