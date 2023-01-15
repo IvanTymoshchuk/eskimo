@@ -1,13 +1,13 @@
 .section {
-  padding: 0 20px;
+  padding-top: 45px;
   margin: 0 auto;
   max-width: 480px;
   @include tablet {
-    padding: 0 32px;
+    padding-top: 45px;
     max-width: 768px;
   }
   @include desktop {
-    padding: 0 16px;
+    padding-top: 45px;
     max-width: 1200px;
   }
 }

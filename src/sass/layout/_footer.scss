@@ -150,3 +150,30 @@
     letter-spacing: 0.02em;
   }
 }
+
+.footer__passion {
+  font-weight: 700;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+  animation: glow 1.5s linear infinite;
+  @include tablet {
+    letter-spacing: 0.06em;
+    font-size: 48px;
+  }
+
+  @include desktop {
+    font-weight: 700;
+    font-size: 58px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
