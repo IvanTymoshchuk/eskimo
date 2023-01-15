@@ -16,6 +16,28 @@
   text-align: center;
 
   color: #131313;
+
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 30%, 0.651) 0,
+    hsla(0, 0%, 100%, 0) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
 }
 
 .modal__cross {
@@ -75,6 +97,17 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+
+  transition: width 2s, height 2s, transform 2s;
+
+  &:hover {
+    background: $bg-green-button;
+    color: $primary-text-color;
+    // transition-property: background, color;
+    // transition-duration: 300ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(360deg);
+  }
 }
 
 .form-modal-2 {

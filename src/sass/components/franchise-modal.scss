@@ -12,7 +12,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 0.3s all;
+  // transition: 0.9s all;
 }
 
 /* Стили для модальных окон */
@@ -21,6 +21,13 @@
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: 0.4s all;
 }
 
 /* Стили для активных классов подложки и окна */
@@ -48,7 +55,7 @@
   background: $fill-icon;
   border: 2px solid $bg-color-button;
   border-radius: 10px;
-  transition: 0.3s all;
+  transition: 0.4s all;
   padding: 31px;
 
   @include mobile {
