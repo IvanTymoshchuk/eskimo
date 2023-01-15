@@ -139,95 +139,285 @@
   fill: currentColor;
 }
 
-.header__mob-menu {
-  z-index: 3;
-  position: fixed;
-  background-color: #84a178;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
-  overflow-y: scroll;
-  @include mobile {
-    padding-top: 104px;
-    padding-bottom: 88px;
+// .header__mob-menu {
+//   z-index: 3;
+//   position: fixed;
+//   background-color: #84a178;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   justify-content: center;
+//   text-align: center;
+//   padding-top: 100px;
+//   padding-bottom: 64px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   transform: translateX(100%);
+//   transition: transform 250ms ease-in-out;
+//   overflow-y: scroll;
+//   @include mobile {
+//     padding-top: 104px;
+//     padding-bottom: 88px;
+//   }
+//   @include tablet {
+//     padding-top: 140px;
+//     padding-bottom: 112px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .header__mob-menu {
+//     display: none;
+//   }
+// }
+// .header__mob-menu.is-open {
+//   transform: translateX(0);
+// }
+// .header__btn-close {
+//   border: none;
+//   background: none;
+//   position: absolute;
+//   right: 20px;
+//   top: 16px;
+//   fill: $primary-white-color;
+//   @include mobile {
+//     top: 20px;
+//   }
+//   @include tablet {
+//     right: 32px;
+//     top: 32px;
+//   }
+//   @include transition(fill);
+//   &:focus {
+//     fill: $primary-text-color;
+//   }
+// }
+// .header__icon-close {
+//   width: 32px;
+//   height: 32px;
+
+//   &:focus {
+//     fill: currentColor;
+//   }
+// }
+
+// .header__mob-block {
+//   margin-bottom: 32px;
+//   @include tablet {
+//     margin-bottom: 40px;
+//   }
+// }
+// .header__tel-button {
+//   display: flex;
+//   max-width: 152px;
+//   background-color: #f8d24e;
+//   color: #000000;
+//   border: none;
+//   border-radius: 10px;
+//   font-weight: 600;
+//   font-size: 14px;
+//   line-height: 17px;
+//   padding: 12px 36px;
+//   margin: 0 auto;
+//   align-items: center;
+//   &:hover {
+//     background-color: #0a8817;
+//     color: #000000;
+//   }
+
+//   &:focus {
+//     background-color: #0a8817;
+//     color: #fcfcfc;
+//   }
+// }
+// ADD
+.menu-open {
+  display: block;
+  border: none;
+  background-color: transparent;
+
+  @include desktop {
+    display: none;
   }
-  @include tablet {
-    padding-top: 140px;
-    padding-bottom: 112px;
+  &:hover {
+    color: $bg-color-button;
   }
 }
-@media (min-width: 1200px) {
-  .header__mob-menu {
+.menu-open-icon {
+  fill: currentColor;
+}
+
+.header-btn {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @include desktop {
+    margin-top: 20px;
+  }
+
+  @include tablet {
+    min-width: 152px;
+    height: 42px;
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: $bg-color-button;
+    border-radius: 10px;
+    padding: 12px 36px;
+
+    @include font(600, 14, 120%, 0.04);
+    text-align: center;
+    @include transitionX3(color, background-color, fill);
+
+    &:hover {
+      background-color: $bg-green-button;
+    }
+
+    &:focus {
+      color: $inverse-color;
+      fill: $inverse-color;
+    }
+
+    &:focus.btn-arrow {
+      fill: $inverse-color;
+    }
+    &:disabled {
+      background-color: $color-button-disable;
+    }
+  }
+
+  @include desktop {
+    margin-top: 20px;
+  }
+}
+
+.btn-arrow {
+  margin-left: 4px;
+}
+// MOBILE MENU
+
+.mob-menu {
+  position: fixed;
+  z-index: 400;
+
+  width: 100vw;
+  height: 100vh;
+  background: $bg-color-body;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  overflow-y: scroll;
+
+  @include transition(transform);
+  transform: translateX(0);
+
+  @include desktop {
     display: none;
   }
 }
-.header__mob-menu.is-open {
-  transform: translateX(0);
+
+.is-hidden {
+  transform: translateX(100vw);
+  // opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-.header__btn-close {
-  border: none;
-  background: none;
-  position: absolute;
-  right: 20px;
-  top: 16px;
-  fill: $primary-white-color;
-  @include mobile {
-    top: 20px;
-  }
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
+  padding: 12px 20px 0;
+
   @include tablet {
-    right: 32px;
-    top: 32px;
-  }
-  @include transition(fill);
-  &:focus {
-    fill: $primary-text-color;
-  }
-}
-.header__icon-close {
-  width: 32px;
-  height: 32px;
-
-  &:focus {
-    fill: currentColor;
+    margin-bottom: 76px;
+    padding: 20px 32px 0;
   }
 }
 
-.header__mob-block {
+.menu-close {
+  display: block;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  color: #fcfcfc;
+
+  &:hover {
+    color: #000000;
+  }
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-item:not(:last-child) {
   margin-bottom: 32px;
+
   @include tablet {
     margin-bottom: 40px;
   }
 }
-.header__tel-button {
+.menu-open-close {
+  fill: currentColor;
+}
+
+.menu-list {
+  margin: auto 0 110px 0;
+  padding: 0 32px;
+}
+
+.menu-link {
+  @include font(700, 32, 120%, 0.04);
+  text-decoration: none;
+  color: $primary-white-color;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $primary-text-color;
+  }
+
+  @include tablet {
+    @include font(700, 48, 120%, 0.04);
+  }
+}
+
+.menu-btn {
+  min-width: 152px;
+  height: 42px;
   display: flex;
-  max-width: 152px;
-  background-color: #f8d24e;
-  color: #000000;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  padding: 12px 36px;
-  margin: 0 auto;
   align-items: center;
+  gap: 4px;
+  border: none;
+  background: $bg-color-button;
+  border-radius: 10px;
+  padding: 12px 36px;
+
+  @include font(600, 14, 120%, 0.04);
+  text-align: center;
+  margin: auto;
+  @include transitionX3(color, background-color, fill);
+
   &:hover {
-    background-color: #0a8817;
-    color: #000000;
+    background-color: $bg-green-button;
   }
 
   &:focus {
-    background-color: #0a8817;
-    color: #fcfcfc;
+    color: $inverse-color;
+    fill: $inverse-color;
+  }
+
+  &:focus.btn-arrow {
+    fill: $inverse-color;
+  }
+  &:disabled {
+    background-color: $color-button-disable;
   }
 }
