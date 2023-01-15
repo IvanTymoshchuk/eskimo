@@ -329,14 +329,10 @@
   width: 15px;
   height: 15px;
   border-bottom: 5px solid black;
-  border-right: 5px solid white;
+  border-right: 5px solid black;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
-  @include desktop {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .arrow-1 span:nth-child(2) {
