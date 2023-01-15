@@ -8,13 +8,9 @@
 .about_title {
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: $primary-white-color;
-
   margin-left: auto;
   margin-right: auto;
   @include tablet {
@@ -29,8 +25,7 @@
   font-family: 'Seymour One';
   font-weight: 400;
   font-size: 30px;
-  line-height: 1.26;
-  letter-spacing: 0.04em;
+  line-height: 1.3;
   text-transform: uppercase;
   color: $primary-white-color;
   justify-content: center;
@@ -127,12 +122,8 @@
 .about_text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.75;
-
-  letter-spacing: 0.04em;
-
+  line-height: 1.8;
   color: $primary-white-color;
-
   max-width: 220px;
   @include tablet {
     max-width: 336px;
@@ -156,7 +147,7 @@
   align-items: center;
   font-weight: 600;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 1.3;
   color: #000000;
   gap: 4px;
   padding: 12px 34px;

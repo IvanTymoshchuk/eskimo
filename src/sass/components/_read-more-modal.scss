@@ -36,7 +36,6 @@
     font-size: 20px;
     line-height: 1.4;
     color: $primary-text-color;
-
     background: linear-gradient(
     to right,
     hsla(0, 0%, 30%, 0.651) 0,
@@ -64,7 +63,6 @@
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 16px;
         margin-bottom: 20px;
       }
     
@@ -86,13 +84,9 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.22; 
     color: $primary-text-color;
-    
     align-items:center;
     text-align: start;
-
     @media screen and (max-width: 480px) {
       font-size: 14px;
     }

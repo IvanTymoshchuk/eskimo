@@ -132,26 +132,18 @@
 }
 
 .advantages__numbers {
-
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.22;
-
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-align: center;
   color: $primary-white-color;
-
   @include tablet {
-
     font-size: 48px;
-    line-height: 1.23;
     margin-bottom: 12px;
   }
 
   @include desktop {
     font-size: 58px;
-    line-height: 1.22;
   }
 }
 
@@ -171,14 +163,12 @@
     width: 152px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.74;
+    line-height: 1.7;
   }
 
   @include desktop {
     width: 368px;
-    font-size: 16px;
-    line-height: 1.76;
-
+    line-height: 1.8;
     letter-spacing: 0.02em;
   }
 }

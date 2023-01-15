@@ -39,8 +39,7 @@
   font-family: 'Seymour One';
   font-weight: 400;
   font-size: 26px;
-  line-height: 33px;
-  letter-spacing: 0.04em;
+  line-height: 1.3;
   text-transform: uppercase;
   color: $primary-white-color;
   margin-bottom: 32px;
@@ -49,7 +48,7 @@
   }
   @include desktop {
     font-size: 38px;
-    line-height: 48px;
+    line-height: 1.3;
     max-width: 367px;
     margin-bottom: 28px;
   }
@@ -73,7 +72,7 @@
 .hero__btn-product {
   font-weight: 600;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.3;
   border-radius: 10px;
   padding: 11px 26px;
   background: none;
@@ -83,7 +82,7 @@
   @include transitionX2(border, color);
   @include desktop {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.3;
     padding: 12px 34px;
   }
   &:hover {
@@ -99,14 +98,14 @@
   text-decoration-line: underline;
   font-weight: 600;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.3;
   background: none;
   border: none;
   color: $bg-color-button;
   @include transition(color);
   @include desktop {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.3;
   }
   &:focus {
     color: #fcfcfc;
@@ -132,16 +131,13 @@
 .hero__num {
   font-weight: 900;
   font-size: 28px;
-  line-height: 34px;
   text-align: right;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $primary-text-color;
 }
 .hero__text {
-  font-weight: 400;
   font-size: 8px;
-  line-height: 10px;
+  line-height: 1.3;
   color: $fill-icon;
 }
 
@@ -160,8 +156,7 @@
 }
 
 .hero__info {
-  font-weight: 400;
-  line-height: 140%;
+  line-height: 1.4;
   color: $primary-white-color;
   @include tablet {
     font-size: 12px;

@@ -19,7 +19,6 @@
   padding: 0 2px;
   font-weight: 700;
   font-size: 18px;
-  line-height: calc(22 / 18);
   text-transform: uppercase;
   color: $inverse-color;
 
@@ -31,16 +30,12 @@
     margin-bottom: 8px;
     max-width: 352px;
     font-size: 26px;
-    line-height: calc(32 / 26);
-    letter-spacing: 0.04em;
   }
 
   @include desktop {
     margin-bottom: 14px;
     font-weight: 400;
     font-size: 30px;
-    line-height: calc(37 / 30);
-    letter-spacing: 0.04em;
   }
 }
 
@@ -49,8 +44,6 @@
   margin-bottom: 60px;
   font-weight: 700;
   font-size: 34px;
-  line-height: calc(41 / 34);
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $inverse-color;
 
@@ -62,14 +55,12 @@
     margin-bottom: 0;
     max-width: 352px;
     font-size: 48px;
-    line-height: calc(59 / 48);
     letter-spacing: 0.06em;
   }
 
   @include desktop {
     margin-bottom: 0;
     font-size: 58px;
-    line-height: calc(71 / 58);
     letter-spacing: 0.06em;
   }
 }
@@ -103,7 +94,7 @@
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 12px;
-  line-height: calc(22 / 12);
+  line-height: 1.8;
   text-align: right;
   color: $primary-text-color;
 
@@ -137,7 +128,7 @@
   padding-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: calc(21 / 14);
+  line-height: 1.5;
   text-align: center;
   color: $copyright-color;
 
@@ -149,13 +140,13 @@
 
   @include tablet {
     padding-bottom: 12px;
-    line-height: calc(26 / 14);
+    line-height: 1.9;
     letter-spacing: 0.02em;
   }
 
   @include desktop {
     font-size: 12px;
-    line-height: calc(22 / 12);
+    line-height: 1.8;
     letter-spacing: 0.02em;
   }
 }
