@@ -4,9 +4,6 @@
   padding: 257px 0 396px;
   background-size: cover;
   background-position: -255px -173px;
-  // background-position: 50% 50%;
-  // mobile default
-  // height: 1132px;
   background-image: url(../images/bg-ice/bg_mob.png);
   @include retina {
     background-image: url(../images/bg-ice/bg_mob-2x.png);
@@ -16,7 +13,6 @@
     padding: 283px 0 390px;
     background-position: 0 0;
     background-image: url(../images/bg-ice/bg_tablet.png);
-    // height: 1017px;
     @include retina {
       background-image: url(../images/bg-ice/bg_tablet-2x.png);
     }
@@ -26,7 +22,6 @@
     padding: 464px 0 228px;
     background-position: right 40px top -250px;
     background-image: url(../images/bg-ice/bg_desktop.png);
-    // height: 1053px;
     @include retina {
       background-image: url(../images/bg-ice/bg_desktop-2x.png);
     }
@@ -48,7 +43,6 @@
   margin: 0 auto;
   margin-bottom: 32px;
 
-  // mobile default
   @include font(400, 12, 2.55, 0.04);
   padding: 35px 39px;
   max-width: 280px;
@@ -58,7 +52,6 @@
     padding: 28px 80px;
     border-radius: 24px;
     max-width: 693px;
-    // width: 705px; bad width - glued!
   }
 
   @include desktop {
@@ -72,7 +65,6 @@
   text-align: center;
   color: $primary-text-color;
   margin-bottom: 12px;
-  // mobile default
   @include font(500, 20, 1.86, null);
 
   @include tablet {
@@ -98,5 +90,3 @@
   color: $nonactive-slide-button-color;
   padding: 4px;
 }
-
-// continue
