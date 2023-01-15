@@ -1,6 +1,7 @@
 .header-modal {
   padding: 28px 29px 28px 28px;
   background-color: $inverse-color;
+      border: 2px solid #f8d24e;
 
   @include tablet {
     padding: 32px 54px;
