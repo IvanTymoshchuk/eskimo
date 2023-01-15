@@ -276,16 +276,11 @@
   @include desktop {
     width: 400px;
   }
-
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// .form-input__name:focus ~ .form-name__icon {
-//   fill: $primary-text-color;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-// }
+.form-input__name:not(:placeholder-shown):invalid {
+  border-color: red;
+}
 
 textarea {
   resize: none;
