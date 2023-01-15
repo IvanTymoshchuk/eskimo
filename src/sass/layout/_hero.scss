@@ -168,13 +168,16 @@
 
   @include tablet {
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
     min-width: 180px;
-    transform: translateY(40px);
+    transform: translateY(32px);
   }
   @include desktop {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    min-width: 220px;
+    transform: translateY(35px);
   }
 }
 
@@ -234,8 +237,9 @@
 .arrow {
   display: block;
   transform: rotate(45deg);
-  margin: 10px;
+  margin-top: 10px;
   animation: animate 2s infinite;
+ 
 
   @include tablet {
     width: 15px;
