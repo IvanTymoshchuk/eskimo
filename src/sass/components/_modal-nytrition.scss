@@ -1,17 +1,9 @@
-.modal.modal-nytrition {
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 568px;
-  }
-}
-
 .modal-nutrition {
+  height: 100%;
   max-width: 568px;
   padding: 32px 40px;
   border-radius: 10px;
+  border: 2px solid #f8d24e;
 }
 
 .modal__title {
@@ -26,57 +18,14 @@
   color: #131313;
 }
 
-.modal__icon {
-  fill: #131313;
+.modal__cross {
   width: 15px;
   height: 15px;
-}
-
-.ice-menu {
-  margin-bottom: 40px;
-
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-}
-
-.ice-menu__container {
-  position: relative;
-  width: 132px;
-  height: 198px;
-}
-
-.ice-menu__picture {
-  top: 7px;
+  fill: #131313;
+  cursor: pointer;
   position: absolute;
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  z-index: 30;
-}
-
-.ice-menu__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 132px;
-  height: 132px;
-  z-index: 40;
-}
-
-.ice-menu__wrap {
-  position: absolute;
-  top: 56px;
-  width: 132px;
-  height: 135px;
-  font-size: 16px;
-  line-height: 1.25;
-
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  z-index: 20;
+  top: 20px;
+  right: 20px;
 }
 
 .field-group__input {
@@ -130,7 +79,7 @@
 }
 
 .form-modal-2 {
-  width: 368px;
+  max-width: 368px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -183,6 +132,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  line-height: 1.4;
   letter-spacing: 0.04em;
   color: #131313;
 }
