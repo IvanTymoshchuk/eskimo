@@ -96,7 +96,6 @@
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   width: 221px;
 
@@ -188,7 +187,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.4;
     padding: 0 20;
   }
@@ -198,7 +196,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.4;
     padding: 0 20;
   }
@@ -210,7 +207,6 @@
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  line-height: 1.16;
   letter-spacing: 0.01em;
 
   color: $primary-text-color;
@@ -356,10 +352,10 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 24px;
+  line-height: 1.5;
 
   @media screen and(max-width:479px) {
-    line-height: 12px;
+    line-height: 0.8;
   }
 }
 
