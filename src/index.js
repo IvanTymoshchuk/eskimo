@@ -1,7 +1,7 @@
+import './js/mobile-menu'
 import './js/anchor-scroll'
 import './js/to-top-btn'
 import './js/slick'
-import './js/mobile-menu'
 import './js/max-height'
 import './js/modal'
 import './js/franshise'
