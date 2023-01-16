@@ -77,7 +77,7 @@
   margin-bottom: 20px;
   padding: 4px 22px;
   border-radius: 4px;
-  @include font(500, 12, 120%, 0.04);
+  @include font(500, 12, 1.2, 0.04);
   text-align: center;
   color: $primary-text-color;
   background-color: $bg-color-button;
@@ -113,7 +113,7 @@
 .address__town,
 .contacts__days-week {
   font-style: normal;
-  @include font(500, 12, 186%, 0.04);
+  @include font(500, 12, 1.9, 0.04);
   color: $primary-text-color;
 
   @include tablet {
@@ -127,7 +127,7 @@
   display: block;
   margin-bottom: 24px;
   font-style: normal;
-  @include font(500, 12, 183%, 0.04);
+  @include font(500, 12, 1.8, 0.04);
   color: $focus-color-text;
 
   @include tablet {
@@ -150,7 +150,7 @@
 }
 
 .contacts__time-week {
-    @include font(500, 12, 1ю7, null);
+  @include font(500, 12, 1.7, null);
   display: block;
   font-weight: 500;
   font-size: 12px;
@@ -215,10 +215,12 @@
   @include transitionX3(background-color, color, fill);
 
   &:hover {
-    background-color: #0a8817;
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
   }
   &:focus {
-    background-color: #0a8817;
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
     color: $inverse-color;
     fill: $inverse-color;
   }
@@ -236,10 +238,14 @@
   @include transitionX3(border, color, fill);
 
   &:hover {
-    border: 2px solid #0a8817;
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+    border: 2px solid $bg-green-button;
   }
   &:focus {
-    border: 2px solid #0a8817;
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+    border: 2px solid $bg-green-button;
     color: $inverse-color;
     fill: $inverse-color;
   }

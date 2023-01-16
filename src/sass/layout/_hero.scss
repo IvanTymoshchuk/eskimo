@@ -86,12 +86,16 @@
   margin-right: 34px;
   }
   &:hover {
-    border-color: #0a8817;
+     background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+    
   }
 
   &:focus {
-    border-color: #0a8817;
-    color: #fcfcfc;
+     background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+    border-color:$bg-green-button;
+    color: $fill-icon;
   }
 }
 .hero__btn-link {
@@ -105,10 +109,10 @@
     font-size: 14px;
   }
   &:focus {
-    color: #fcfcfc;
+    color: $fill-icon;
   }
   &:hover {
-    color: #0a8817;
+    color: $bg-green-button;
   }
 }
 .hero__list {

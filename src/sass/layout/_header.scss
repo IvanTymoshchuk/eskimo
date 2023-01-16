@@ -54,29 +54,31 @@
   @include transition(color);
   &:hover,
   &:focus {
-    color: #f8d24e;
+    color: $bg-color-button;
   }
 }
 
 .header-btn {
- @include centerAlingn;
+  @include centerAlingn;
   padding: 12px 36px;
   height: 42px;
   min-width: 152px;
   text-align: center;
-  @include font(600, 14, 120%, 0.04);
+  @include font(600, 14, 1.2, 0.04);
   color: $primary-text-color;
   fill: $primary-text-color;
   background-color: $bg-color-button;
   border: none;
   border-radius: 10px;
-  @include transitionX3(color, background-color, fill);
+  @include transitionX3(color, background-color, animation);
 
   &:hover {
     background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
   }
   &:focus {
     background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
     color: $inverse-color;
     fill: $inverse-color;
   }
@@ -151,7 +153,7 @@
 }
 
 .menu-header {
- @include centerAlingn;
+  @include centerAlingn;
   justify-content: space-between;
   margin-bottom: 51px;
 
@@ -204,7 +206,7 @@
 }
 
 .menu-link {
-  @include font(700, 32, 120%, 0.04);
+  @include font(700, 32, 1.2, 0.04);
   text-decoration: none;
   color: $primary-white-color;
   @include transition(color);
@@ -215,7 +217,7 @@
   }
 
   @include tablet {
-    @include font(700, 48, 120%, 0.04);
+    @include font(700, 48, 1.2, 0.04);
   }
 }
 
@@ -234,7 +236,7 @@
   background: $bg-color-button;
   border-radius: 10px;
 
-  @include font(600, 14, 120%, 0.04);
+  @include font(600, 14, 1.2, 0.04);
   text-align: center;
   margin: auto;
   @include transitionX3(color, background-color, fill);
