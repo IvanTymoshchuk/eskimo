@@ -1,10 +1,8 @@
-.modal.active {
-  overflow-y: scroll;
-}
-
 .products-modal {
   width: 95%;
   height: 100%;
+  top: 0;
+  left: 0;
   padding-left: 20px;
   padding-right: 20px;
   border: 2px solid $bg-color-button;
@@ -14,6 +12,14 @@
     max-height: 996px;
     padding: 32px 60px;
   }
+}
+
+.modal.active {
+  overflow-y: scroll;
+  transition: 0.4s all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .product-modal__title {
@@ -62,7 +68,7 @@
   }
 }
 .modal__features {
-    @include centerFlex();
+  @include centerFlex();
   margin-bottom: 48px;
 }
 .modal__list {

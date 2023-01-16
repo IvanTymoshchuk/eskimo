@@ -9,8 +9,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
-  transition: 0.4s all;
 }
 
 /* Стили для активных классов подложки и окна */
@@ -54,7 +52,7 @@
 
 .form-franchise__title {
   @include font(400, 16, 1.5, null);
-   @include centerAlingn;
+  @include centerAlingn;
   font-family: 'Seymour One';
   justify-content: space-between;
   margin-bottom: 20px;
