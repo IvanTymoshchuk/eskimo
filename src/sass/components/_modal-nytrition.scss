@@ -58,9 +58,7 @@
   }
 }
 .modal__features {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+    @include centerFlex();
   margin-bottom: 48px;
 }
 .modal__list {

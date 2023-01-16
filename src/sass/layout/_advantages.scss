@@ -96,10 +96,6 @@
       border-radius: 100%;
     }
 
-    // 60% {
-    //   background-color: rgba(85, 101, 245, 0.692);
-    // }
-
     100% {
       transform: scale(1.5);
       background-color: $bg-color-button;
@@ -132,11 +128,10 @@
 }
 
 .advantages__numbers {
-  font-weight: 700;
-  font-size: 36px;
   text-transform: uppercase;
   text-align: center;
   color: $primary-white-color;
+  @include font(700, 36, null, null);
   @include tablet {
     font-size: 48px;
     margin-bottom: 12px;
@@ -149,26 +144,16 @@
 
 .advantages__text {
   width: 230px;
-
-
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.7;
-
   text-align: center;
-
   color: $primary-white-color;
-
+  @include font(700, 12, 1.7, null);
   @include tablet {
+    @include font(400, 14, 1.7, null);
     width: 152px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
   }
 
   @include desktop {
+    @include font(null, null, 1.8, 0.02);
     width: 368px;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
   }
 }

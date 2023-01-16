@@ -35,11 +35,8 @@
 }
 
 .modal__titlle{
+   @include font(400, 20, 1.4, null);
     font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
     color: $primary-text-color;
     background: linear-gradient(
     to right,
@@ -86,9 +83,6 @@
 }
 
 .modal__text{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     color: $primary-text-color;
     align-items:center;
     text-align: start;

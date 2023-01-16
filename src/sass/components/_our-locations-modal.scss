@@ -1,9 +1,6 @@
 
 .modal__map-btn {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
+   @include font(600, 14, null, null);
   cursor: pointer;
   min-width: 145px;
   display: inline-block;

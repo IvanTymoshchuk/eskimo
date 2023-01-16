@@ -17,10 +17,9 @@
 .footer__text {
   margin-bottom: 16px;
   padding: 0 2px;
-  font-weight: 700;
-  font-size: 18px;
   text-transform: uppercase;
   color: $inverse-color;
+  @include font(700, 18, null, null);
 
   @media screen and (max-width: 767px) {
     max-width: 232px;
@@ -33,19 +32,18 @@
   }
 
   @include desktop {
+     @include font(400, 30, null, null);
     margin-bottom: 14px;
-    font-weight: 400;
-    font-size: 30px;
+   
   }
 }
 
 .footer__strong {
   display: block;
   margin-bottom: 60px;
-  font-weight: 700;
-  font-size: 34px;
   text-transform: uppercase;
   color: $inverse-color;
+   @include font(700, 34, null, null);
 
   @media screen and (max-width: 767px) {
     max-width: 200px;
@@ -92,11 +90,9 @@
 
 .footer__text-link {
   margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.8;
   text-align: right;
   color: $primary-text-color;
+   @include font(700, 12, 1.8, null);
 
   @include tablet {
     margin-bottom: 0;
@@ -104,6 +100,7 @@
 }
 
 .footer__link {
+  text-decoration: none;
   color: $inverse-color;
 }
 
@@ -126,11 +123,9 @@
 
 .footer__copyright {
   padding-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
   text-align: center;
   color: $copyright-color;
+   @include font(700, 14, 1.5, null);
 
   @media screen and (max-width: 767px) {
     margin-right: auto;
@@ -139,33 +134,29 @@
   }
 
   @include tablet {
+     @include font(null, null, 1.9, 0.02);
     padding-bottom: 12px;
     line-height: 1.9;
     letter-spacing: 0.02em;
   }
 
   @include desktop {
-    font-size: 12px;
     line-height: 1.8;
-    letter-spacing: 0.02em;
   }
 }
 
 .footer__passion {
-  font-weight: 700;
-  font-size: 34px;
   text-transform: uppercase;
   color: yellow;
   text-shadow: 0 0 15px yellow, 0 0 25px yellow;
   animation: glow 1.5s linear infinite;
+  @include font(700, 34, null, null);
   @include tablet {
-    letter-spacing: 0.06em;
-    font-size: 48px;
+    @include font(null, 48, null, 0.06);
   }
 
   @include desktop {
-    font-weight: 700;
-    font-size: 58px;
+    @include font(700, 58, null, null);
   }
 }
 

@@ -197,7 +197,7 @@
   display: inline-flex;
   align-items: center;
   width: 164px;
-  color: #000000;
+  color: $primary-text-color;
   gap: 4px;
   padding: 12px 30px 12px 34px;
   border: transparent;
@@ -208,7 +208,7 @@
 }
 .about__button {
   &:hover {
-    color: #000000;
+    color: $primary-text-color;
     background-color: $bg-green-button;
     border-color: $bg-green-button;
   }

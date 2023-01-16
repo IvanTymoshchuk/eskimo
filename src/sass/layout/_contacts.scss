@@ -58,13 +58,11 @@
 }
 
 .contacts__list-card:hover .contacts__item-card {
-  // opacity: .9;
   transform: scale(1);
 }
 
 .contacts__list-card:hover .contacts__item-card:hover {
   transform: scale(1.07);
-  // opacity: 1;
   @include tablet {
     transform: scale(1.1);
   }
@@ -180,14 +178,11 @@
 }
 
 .contacts__link-join {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.6;
   color: $primary-text-color;
+  @include font(500, 12, 1.6, null);
 
   @include tablet {
-    font-size: 14px;
-    line-height: 1.5;
+    @include font(null, 14, 1.5, null);
   }
 }
 
@@ -206,11 +201,7 @@
 
 .contacts__btn {
   @include centerFlex;
-  text-align: center;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.3;
-
+  @include font(600, 14, 1.3, null);
   color: $primary-text-color;
 }
 
