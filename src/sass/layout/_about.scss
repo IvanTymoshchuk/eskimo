@@ -4,78 +4,91 @@
   @media screen and (max-width: 767px) {
     display: flex;
   }
-}
-.about_title {
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  margin-left: auto;
-  margin-right: auto;
-  @include tablet {
-    font-size: 22px;
+  @include tablet{
+    padding-bottom: 80px;
   }
   @include desktop {
-    font-size: 30px;
+    padding-bottom: 120px;
   }
 }
 
-.about_subtitle {
-  font-family: 'Seymour One';
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 200;
-  @include tablet {
-    font-size: 34px;
-    max-width: 454px;
-    letter-spacing: 0.06;
-  }
-  @include desktop {
-    font-size: 36px;
-    letter-spacing: 0.06;
-    max-width: 481px;
-  }
-}
 .about-wrap__title {
   display: flex;
+  text-align: center;
+  flex-direction: column;
   gap: 12px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
     flex-direction: column-reverse;
   }
+
   @include tablet {
     margin-bottom: 72px;
     flex-direction: column;
   }
+
   @include desktop {
     margin-bottom: 82px;
   }
 }
 
-.about_wrap {
+.about__subtitle {
+  @include font(700, 18, 1.22, null);
+  text-transform: uppercase;
+  color: $primary-white-color;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include tablet {
+    @include font(700, 22, 1.23, 0.04)
+  }
+  @include desktop {
+    @include font(700, 30, 1.23, 0.06);
+    margin: 0 auto;
+  }
+}
+
+.about__title {
+  @include font(400, 30, 1.27, 0.04);
+  font-family: 'Seymour One';
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  max-width: 200px;
+  margin: 0 auto;
+  @include tablet {
+    @include font(null, 34, 1.26, 0.06);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    @include font(null, 36, 1.25, 0.06);
+  }
+}
+
+.about__wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 40px;
   @media screen and (max-width: 767px) {
     text-align: center;
   }
   @include tablet {
     flex-direction: row;
+    gap: 109px;
+  }
+  @include desktop {
     justify-content: space-between;
   }
+
+  
 }
 
-.about_picture_wrap {
+.about__picture-wrap {
   background: linear-gradient(
       0deg,
       rgba(248, 210, 78, 0.7),
@@ -91,7 +104,7 @@
     border-radius: 250px;
   }
 }
-.about_picture {
+.about__picture {
   display: block;
   transform: translateY(22px);
 
@@ -133,80 +146,77 @@
   }
 }
 
-.about_wrap_text {
-  margin-top: 40px;
-
-  margin-bottom: 50px;
-  @include mobile {
-    margin-bottom: 60px;
-  }
+.about__wrap-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   @include tablet {
-    margin-bottom: 80px;
-    margin-top: 80px;
+    gap: 8px;
   }
   @include desktop {
-    margin-bottom: 146px;
-    margin-top: 172px;
-    margin-right: 121px;
+    padding-right: 121px
   }
 }
-.about_text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.8;
+.about__text {
+  @include font(400, 12, 1.62, null);
   color: $primary-white-color;
-  max-width: 220px;
+  width: 220px;
   @include tablet {
-    max-width: 336px;
+    width: 336px;
   }
   @include desktop {
-    max-width: 463px;
-    font-size: 14px;
+    width: 463px;
+    @include font(null, 14, 1.76, null);
   }
 }
-.about_text:not(:last-child) {
-  margin-bottom: 4px;
-}
-.about_text_mob {
+.about__text:not(:nth-child(1)) {
+  margin-bottom: 10px;
+  line-height: 1.76;
+  @include mobile{
+    margin-bottom: 24px;
+  }
   @include tablet {
-    display: none;
+    margin-bottom: 0;
+  }
+}
+.about__text-mob {
+  display: none;
+  @include tablet {
+    display: inline;
   }
 }
 
-.about_button {
+.about__text.about__text-mob {
+     @include tablet {
+       display: inline;
+       margin-bottom: 24px
+     }
+     @include desktop {
+      margin-bottom: 44px
+     }
+    }
+.about__button {
+  @include font(600, 14, 1.3, null);
   display: inline-flex;
   align-items: center;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.3;
+  width: 164px;
   color: #000000;
   gap: 4px;
-  padding: 12px 34px;
+  padding: 12px 30px 12px 34px;
   border: 2px solid #0000;
   border-radius: 10px;
   background-color: $bg-color-button;
   border-color: $bg-color-button;
 
-  margin-top: 10px;
-
-  @include mobile {
-    margin-top: 24px;
-  }
-  @include tablet {
-    margin-top: 32px;
-  }
-  @include desktop {
-    margin-top: 54px;
-  }
 }
-.about_button {
+.about__button {
   &:hover {
     color: #000000;
     background-color: $bg-green-button;
     border-color: $bg-green-button;
   }
 }
-.about_button,
+.about__button,
 .icon-arrow__about {
   &:focus {
     fill: $fill-icon;
