@@ -13,7 +13,6 @@
 
   @include tablet {
     background-position: -20px -97px;
-    background-size: cover;
     background-image: url(../images/bg-ice/bg_tablet.png);
 
     @include retina {
@@ -23,7 +22,6 @@
   @include desktop {
     background-image: url(../images/bg-ice/bg_desktop.png);
     background-position: -46px -227px;
-    background-size: cover;
 
     @include retina {
       background-image: url(../images/bg-ice/bg_desktop-2x.png);
