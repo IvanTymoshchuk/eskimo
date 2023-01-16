@@ -1,4 +1,3 @@
-
 /* Стили для модальных окон */
 
 .modal.modal-franchise {
@@ -25,7 +24,6 @@
   opacity: 1;
   visibility: visible;
   overflow: hidden;
-
   transform: translate(-50%, -50%);
   position: fixed;
   width: 95%;
@@ -35,14 +33,13 @@
   z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-
   background: $fill-icon;
   border: 2px solid $bg-color-button;
   border-radius: 10px;
   transition: 0.4s all;
-  padding: 31px 58px;
 
   @include mobile {
+    padding: 31px 58px;
     width: 95%;
     height: 660px;
   }
@@ -51,25 +48,7 @@
     width: 568px;
     height: 668px;
   }
-
-  @include desktop {
-    width: 568px;
-    height: 668px;
-  }
 }
-
-/* Стили для кнопки закрытия */
-
-.modal__cross {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: $primary-text-color;
-  cursor: pointer;
-}
-
 
 /* -------------- madal form -------------- */
 
@@ -126,7 +105,7 @@
 }
 
 .form-paragraf {
-@include font(400, 20, 1.4, null);
+  @include font(400, 14, 1.4, null);
   text-align: left;
   margin-bottom: 24px;
   color: $primary-text-color;
@@ -136,7 +115,7 @@
   }
 
   @include tablet {
-   @include font(null, 16, 1.4, null);
+    @include font(null, 16, 1.4, null);
     letter-spacing: normal;
     text-align: left;
   }
@@ -276,7 +255,7 @@ textarea:focus {
 }
 
 .label-checkbox {
-   @include centerFlex();
+  @include centerFlex();
   line-height: 1.5;
 
   @media screen and(max-width:479px) {
@@ -304,7 +283,7 @@ textarea:focus {
 
 .form-button {
   @include font(600, 12, 1.3, null);
-   @include centerFlex();
+  @include centerFlex();
   width: 114px;
   height: 42px;
   margin-right: auto;
