@@ -86,19 +86,19 @@
   @keyframes stretch {
     0% {
       transform: scale(1);
-      background-color: $bg-green-button;
+      background-color: #90EE90;
       border-radius: 100%;
     }
 
     50% {
       transform: scale(1);
-      background-color: $focus-color-text;
+      background-color: #3CB371;
       border-radius: 100%;
     }
 
     100% {
       transform: scale(1.5);
-      background-color: $bg-color-button;
+      background-color: #2E8B57;
     }
   }
 }
