@@ -1,6 +1,12 @@
-import './js/modal'
-import './js/to-top-btn'
 import './js/anchor-scroll'
-import './js/disabled'
-import './js/tel'
+import './js/to-top-btn'
+import './js/slick'
+import './js/mobile-menu'
+import './js/max-height'
+import './js/modal'
+import './js/franshise'
+import './js/buy-now'
+import './js/nutrition'
+
+
 

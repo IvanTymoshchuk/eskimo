@@ -279,6 +279,10 @@ border-radius: 10px;
   border-color: red;
 }
 
+.header-modal__input:not(:placeholder-shown):valid {
+  border-color: $modal-nutrision-linge;
+}
+
 .header-modal__comment {
   resize: none;
   height: 65px;

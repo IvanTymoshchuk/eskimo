@@ -198,6 +198,9 @@
 .form-input__name:not(:placeholder-shown):invalid {
   border-color: red;
 }
+.form-input__name:not(:placeholder-shown):valid {
+  border-color: $modal-nutrision-linge;
+}
 
 textarea {
   resize: none;
