@@ -12,7 +12,6 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: 1s all;
 }
 
 /* Стили для модальных окон */
@@ -22,24 +21,26 @@
   opacity: 0;
   visibility: hidden;
 
+  top: 0;
+  left: 0;
+
   /*  Установаем ширину окна  */
   width: 100%;
   // max-width: 500px;
 
   /*  Центрируем и задаем z-index */
   position: fixed;
-  top: 50%;
-  left: 50%;
+
   transform: translate(-50%, -50%);
   z-index: 30; /* Должен быть выше чем у подложки*/
 
   /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  // padding: 30px;
+  padding: 30px;
   border-radius: 3px;
   background-color: #fff;
-  transition: 1s all;
+  transition: 0.5s all;
 }
 
 /* Стили для активных классов подложки и окна */
@@ -48,8 +49,11 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
+  transition: 0.4s all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 /* Стили для кнопки закрытия */
 
 .modal__cross {
