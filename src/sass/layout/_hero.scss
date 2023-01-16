@@ -81,6 +81,7 @@
   background: none;
   color: #000000;
   margin-right: 12px;
+  text-decoration: none;
   border: 2px solid $bg-color-button;
   @include transitionX2(border, color);
   @include desktop {
@@ -144,9 +145,14 @@
     font-size: 46px;}
 }
 .hero__text {
-  font-size: 14px;
   line-height: 1.3;
   color: $fill-icon;
+  @include tablet {
+    font-size: 8px;
+    }
+  @include desktop{
+    font-size: 14px;
+  }
 }
 
 .hero__wrapper-info {
