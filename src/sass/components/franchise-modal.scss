@@ -1,3 +1,11 @@
+.modal-franchise__for-scroll {
+  width: 100%;
+  height: 100%;
+  padding: 28px 30px;
+  @include tablet {
+    padding: 32px 60px;
+  }
+}
 /* Стили для модальных окон */
 
 .modal.modal-franchise {
@@ -27,7 +35,7 @@
   transform: translate(-50%, -50%);
   position: fixed;
   width: 95%;
-  height: 674px;
+  height: 95%;
   top: 50%;
   left: 50%;
   z-index: 30;
@@ -39,8 +47,6 @@
   transition: 0.4s all;
 
   @include mobile {
-    padding: 31px 58px;
-    width: 95%;
     height: 660px;
   }
 
@@ -54,7 +60,7 @@
 
 .form-franchise__title {
   @include font(400, 16, 1.5, null);
-   @include centerAlingn;
+  @include centerAlingn;
   font-family: 'Seymour One';
   justify-content: space-between;
   margin-bottom: 20px;

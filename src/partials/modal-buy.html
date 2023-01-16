@@ -1,73 +1,56 @@
 <div class="modal header-modal" data-modal="5">
-  <svg
-    class="modal__cross js-modal-close"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <path
-      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-    />
-  </svg>
+  <div class="header-modal__for-scroll" data-simplebar>
+    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+      />
+    </svg>
 
-  <h2 class="header-modal__title">Buy now</h2>
-  <ul class="header-modal__list">
-    <li class="header-modal__item">
-      <label class="header-modal__label">
-        <input
-          class="header-modal__checkbox"
-          type="checkbox"
-          name="product"
-          value="icecream"
-        />
-        <span class="header-modal__product icecream">ice cream</span>
-      </label>
-    </li>
-    <li class="header-modal__item">
-      <label class="header-modal__label">
-        <input
-          class="header-modal__checkbox"
-          type="checkbox"
-          name="product"
-          value="icecoffe"
-        />
-        <span class="header-modal__product icecoffe">ice coffee</span>
-      </label>
-    </li>
-    <li class="header-modal__item">
-      <label class="header-modal__label">
-        <input
-          class="header-modal__checkbox"
-          type="checkbox"
-          name="product"
-          value="milkshake"
-        />
-        <span class="header-modal__product milkshake">milkshake</span>
-      </label>
-    </li>
-  </ul>
-  <form class="header-modal__form">
-    <input
-      class="header-modal__input buynow-js"
-      type="text"
-      placeholder="Name"
-      pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-      title="Name must be two words separated by space."
-    />
-    <input
-      class="header-modal__input buynow-js"
-      type="text"
-      pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
-       placeholder="+380 (__) ___-__-__"
-      data-slots="_"
-      title="+380 (00) 000-00-00"
-    />
-    <textarea
-      class="header-modal__input header-modal__comment"
-      name="comment"
-      placeholder="Comment"
-      cols="30"
-      rows="10"
-    ></textarea>
-    <button class="submit-btn button buynow-button-js" type="submit">Submit</button>
-  </form>
+    <h2 class="header-modal__title">Buy now</h2>
+    <ul class="header-modal__list">
+      <li class="header-modal__item">
+        <label class="header-modal__label">
+          <input class="header-modal__checkbox" type="checkbox" name="product" value="icecream" />
+          <span class="header-modal__product icecream">ice cream</span>
+        </label>
+      </li>
+      <li class="header-modal__item">
+        <label class="header-modal__label">
+          <input class="header-modal__checkbox" type="checkbox" name="product" value="icecoffe" />
+          <span class="header-modal__product icecoffe">ice coffee</span>
+        </label>
+      </li>
+      <li class="header-modal__item">
+        <label class="header-modal__label">
+          <input class="header-modal__checkbox" type="checkbox" name="product" value="milkshake" />
+          <span class="header-modal__product milkshake">milkshake</span>
+        </label>
+      </li>
+    </ul>
+    <form class="header-modal__form">
+      <input
+        class="header-modal__input buynow-js"
+        type="text"
+        placeholder="Name"
+        pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+        title="Name must be two words separated by space."
+      />
+      <input
+        class="header-modal__input buynow-js"
+        type="text"
+        pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
+        placeholder="+380 (__) ___-__-__"
+        data-slots="_"
+        title="+380 (00) 000-00-00"
+      />
+      <textarea
+        class="header-modal__input header-modal__comment"
+        name="comment"
+        placeholder="Comment"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button class="submit-btn button buynow-button-js" type="submit">Submit</button>
+    </form>
+  </div>
 </div>
