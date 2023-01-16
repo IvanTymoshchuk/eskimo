@@ -1,44 +1,16 @@
 <div class="modal modal-nutrition" data-modal="1">
-   <svg
-      class="modal__cross js-modal-close"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-      />
-    </svg>
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
   <h2 class="modal__title">Chololate icecream</h2>
   <div class="modal-picture__wrap">
-    <picture class="modal-picture">
-      <source
-        srcset="
-          ./images/products/ingredients-ice-cream-modal.png    1x,
-          ./images/products/ingredients-ice-cream-modal-2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="
-          ./images/products/ingredients-ice-cream-modal.png    1x,
-          ./images/products/ingredients-ice-cream-modal-2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="
-          ./images/products/ingredients-ice-cream-modal.png    1x,
-          ./images/products/ingredients-ice-cream-modal-2x.png 2x
-        "
-        media="(min-width: 480px)"
-      />
-      <img
-        class="products__picture"
-        src="./images/products/ingredients-ice-cream-modal.png"
-        alt="Ingredients Ice cream"
-      />
-    </picture>
-    <div class="back-shadow"></div>
+    <span class="chocolate-ice-cream"></span>
   </div>
 
   <div class="nutrition-facts">
@@ -87,25 +59,29 @@
       <li>10g</li>
     </ul>
   </div>
-  <form class="form-modal-2">
+
+  <form class="nutrition-modal__form">
     <input
-      class="field-group__input"
+      class="nutrition-modal__input"
       type="text"
-      name="user-name"
-      id="user-name"
       placeholder="Name"
+      pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+      title="Name must be two words separated by space."
     />
-
-    <input class="field-group__input" type="tel" id="tel" placeholder="Phone" />
-
+    <input
+      class="nutrition-modal__input"
+      type="text"
+      placeholder="Phone"
+      pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
+      title="Phone cannot contain letters."
+    />
     <textarea
-      id="comment"
-      class="field-group__textarea"
+      class="nutrition-modal__input nutrition-modal__comment"
       name="comment"
-      rows="10"
       placeholder="Comment"
+      cols="30"
+      rows="10"
     ></textarea>
-
-    <button class="field-group__send-button" type="submit">Submit</button>
+    <button class="submit-btn button" type="submit">Submit</button>
   </form>
 </div>

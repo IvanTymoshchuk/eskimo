@@ -155,6 +155,10 @@
 
 .icecoffe {
   border-color: yellow;
+  background: #efd478;
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  border-radius: 15px;
 }
 
 .icecoffe::before {
@@ -254,7 +258,8 @@
 
   outline: none;
   background-color: rgba(248, 210, 78, 0.1);
-  border: solid 1px yellow;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
   border-radius: 10px;
 
   font-size: 12px;
