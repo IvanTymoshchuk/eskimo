@@ -150,6 +150,7 @@
 }
 
 .contacts__time-week {
+    @include font(500, 12, 1ю7, null);
   display: block;
   font-weight: 500;
   font-size: 12px;

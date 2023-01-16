@@ -46,10 +46,9 @@
 }
 
 .header__nav-link {
+    @include font(700, null, 1.3, null);
   display: block;
   padding: 32px 0 13px;
-  font-weight: 700;
-  line-height: 1.3;
   color: $primary-white-color;
   @include transition(color);
   &:hover,

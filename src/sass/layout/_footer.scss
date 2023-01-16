@@ -50,16 +50,14 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include font(null, 48, null, 0.06);
     margin-bottom: 0;
     max-width: 352px;
-    font-size: 48px;
-    letter-spacing: 0.06em;
   }
 
   @include desktop {
+      @include font(null, 58, null, 0.06);
     margin-bottom: 0;
-    font-size: 58px;
-    letter-spacing: 0.06em;
   }
 }
 
@@ -136,8 +134,6 @@
   @include tablet {
      @include font(null, null, 1.9, 0.02);
     padding-bottom: 12px;
-    line-height: 1.9;
-    letter-spacing: 0.02em;
   }
 
   @include desktop {

@@ -1,7 +1,5 @@
 import './js/modal'
 import './js/to-top-btn'
 import './js/anchor-scroll'
-import './js/buy-now-modal'
-import './js/nurtition-modal'
-import './js/franshise-modal'
+import './js/disabled'
 import './js/tel'

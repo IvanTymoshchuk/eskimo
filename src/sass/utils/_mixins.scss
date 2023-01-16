@@ -37,6 +37,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin Alingncenter() {
+  display: flex;
+  align-items: center;
+  
+}
 //
 
 // Т Е К С Т
