@@ -47,18 +47,19 @@
   </ul>
   <form class="header-modal__form">
     <input
-      class="header-modal__input"
+      class="header-modal__input buynow-js"
       type="text"
       placeholder="Name"
       pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
       title="Name must be two words separated by space."
     />
     <input
-      class="header-modal__input"
+      class="header-modal__input buynow-js"
       type="text"
-      placeholder="Phone"
       pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
-      title="Phone cannot contain letters."
+       placeholder="+380 (__) ___-__-__"
+      data-slots="_"
+      title="+380 (00) 000-00-00"
     />
     <textarea
       class="header-modal__input header-modal__comment"
@@ -67,6 +68,6 @@
       cols="30"
       rows="10"
     ></textarea>
-    <button class="submit-btn button" type="submit">Submit</button>
+    <button class="submit-btn button buynow-button-js" type="submit">Submit</button>
   </form>
 </div>

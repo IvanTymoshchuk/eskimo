@@ -1,13 +1,13 @@
 <div class="modal modal-nutrition" data-modal="1">
-   <svg
-      class="modal__cross js-modal-close"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-      />
-    </svg>
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
   <h2 class="modal__title">Chololate icecream</h2>
   <div class="modal-picture__wrap">
     <picture class="modal-picture">
@@ -89,14 +89,21 @@
   </div>
   <form class="form-modal-2">
     <input
-      class="field-group__input"
+      class="field-group__input nutrition-js"
       type="text"
       name="user-name"
       id="user-name"
       placeholder="Name"
     />
 
-    <input class="field-group__input" type="tel" id="tel" placeholder="Phone" />
+    <input
+      class="field-group__input nutrition-js"
+      type="tel"
+      id="tel"
+      placeholder="+380 (__) ___-__-__"
+      data-slots="_"
+      title="+380 (00) 000-00-00"
+    />
 
     <textarea
       id="comment"
@@ -106,6 +113,8 @@
       placeholder="Comment"
     ></textarea>
 
-    <button class="field-group__send-button" type="submit">Submit</button>
+    <button class="form-button nutrition-button-js" type="submit">
+      Submit
+    </button>
   </form>
 </div>
