@@ -46,7 +46,7 @@
 }
 
 .header__nav-link {
-    @include font(700, null, 1.3, null);
+  @include font(700, null, 1.3, null);
   display: block;
   padding: 32px 0 13px;
   color: $primary-white-color;
@@ -221,6 +221,9 @@
 }
 
 .menu-btn {
+  @include tablet {
+    display: none;
+  }
   display: flex;
   align-items: center;
   padding: 12px 36px;

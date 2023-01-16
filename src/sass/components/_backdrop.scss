@@ -4,7 +4,7 @@
   /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+ 
 
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+ 
 
   /*  Установаем ширину окна  */
   width: 100%;
@@ -50,6 +50,9 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
+   @media screen and (max-width: 480px) {
+    overflow: scroll;;
+  }
 }
 
 /* Стили для кнопки закрытия */
