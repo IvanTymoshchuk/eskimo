@@ -50,9 +50,6 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
-   @media screen and (max-width: 480px) {
-    overflow: scroll;;
-  }
 }
 
 /* Стили для кнопки закрытия */
