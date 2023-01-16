@@ -69,9 +69,7 @@
 }
 
 .about__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@include centerFlex;
   flex-direction: column;
   @media screen and (max-width: 767px) {
     text-align: center;
@@ -142,10 +140,9 @@
 }
 
 .about__wrap-text {
-  display: flex;
+  @include centerAlingn;
   flex-direction: column;
   gap: 4px;
-  align-items: center;
   @include tablet {
     align-items: flex-start;
     gap: 8px;

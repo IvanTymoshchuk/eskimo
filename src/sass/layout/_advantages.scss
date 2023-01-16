@@ -22,10 +22,9 @@
 }
 
 .advantages__item {
+  @include centerAlingn;
   width: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 16px;
 
   @media screen and (max-width: 480px) {

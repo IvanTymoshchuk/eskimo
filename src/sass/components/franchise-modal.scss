@@ -54,9 +54,8 @@
 
 .form-franchise__title {
   @include font(400, 16, 1.5, null);
+   @include centerAlingn;
   font-family: 'Seymour One';
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 

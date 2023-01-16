@@ -63,11 +63,10 @@
 }
 
 .products__list {
+  @include centerAlingn;
   flex-direction: column;
   gap: 168px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
   @include tablet {
     gap: 16px;
     flex-direction: row;

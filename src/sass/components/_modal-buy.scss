@@ -42,9 +42,8 @@
   }
 
   &__list {
-    display: flex;
+     @include centerAlingn;
     flex-direction: column;
-    align-items: center;
     gap: 84px;
     margin-bottom: 31px;
 

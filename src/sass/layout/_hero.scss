@@ -32,8 +32,7 @@
   }
 }
 .hero__wrapper {
-  display: flex;
-  align-items: center;
+ @include centerAlingn;
   @media screen and (max-width: 767px) {
     display: none;
   }

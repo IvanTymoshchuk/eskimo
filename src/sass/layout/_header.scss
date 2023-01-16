@@ -59,8 +59,7 @@
 }
 
 .header-btn {
-  display: flex;
-  align-items: center;
+ @include centerAlingn;
   padding: 12px 36px;
   height: 42px;
   min-width: 152px;
@@ -152,8 +151,7 @@
 }
 
 .menu-header {
-  display: flex;
-  align-items: center;
+ @include centerAlingn;
   justify-content: space-between;
   margin-bottom: 51px;
 
@@ -225,8 +223,7 @@
   @include tablet {
     display: none;
   }
-  display: flex;
-  align-items: center;
+  @include centerAlingn;
   padding: 12px 36px;
   min-width: 152px;
   height: 42px;
