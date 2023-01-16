@@ -4,7 +4,6 @@
   /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
- 
 
   position: fixed;
   top: 0;
@@ -22,7 +21,6 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
- 
 
   /*  Установаем ширину окна  */
   width: 100%;
@@ -62,4 +60,10 @@
   right: 20px;
   fill: #444;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    fill: brown;
+  }
 }
