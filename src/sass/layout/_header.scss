@@ -54,8 +54,22 @@
   @include transition(color);
   &:hover,
   &:focus {
+    transition: color 0.75s, transform 0.75s;
+    transform: scale(1.1);
     color: $bg-color-button;
   }
+}
+
+.header__nav-link:hover::after,
+.header__nav-link:focus::after {
+  content: '';
+  width: 100%;
+  height: 6px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  bottom: -1px;
 }
 
 .header-btn {
