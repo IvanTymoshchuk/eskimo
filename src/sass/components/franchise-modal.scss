@@ -86,16 +86,6 @@
   cursor: pointer;
 }
 
-// /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
-
-// // a {
-// //   padding: 20px;
-// //   display: inline-block;
-// //   text-decoration: none;
-// //   margin: 10px;
-// //   color: $primary-white-color;
-// //   border-radius: 3px;
-// // }
 
 /* -------------- madal form -------------- */
 
@@ -242,9 +232,6 @@
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid $bg-color-body;
   border-radius: 10px;
-  // transition-property: $bg-color-body;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   transition: width 1s;
 
@@ -293,8 +280,6 @@ textarea {
   border: 1px solid $bg-color-body;
   border-radius: 10px;
   transition-property: $inverse-color;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: width 2s;
 
   @include mobile {
@@ -320,9 +305,6 @@ textarea:focus {
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid $focus-color-text;
   border-radius: 10px;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   @include mobile {
     width: 350px;
   }
@@ -395,9 +377,6 @@ textarea:focus {
   text-align: center;
 
   transition: width 2s, height 2s, transform 2s;
-  // transition-property: backround, color;
-  // transition-duration: 300ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   @include tablet {
     width: 121px;
@@ -416,9 +395,7 @@ textarea:focus {
   &:hover {
     background: $bg-green-button;
     color: $primary-text-color;
-    // transition-property: background, color;
-    // transition-duration: 300ms;
-    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     transform: rotate(360deg);
   }
 
