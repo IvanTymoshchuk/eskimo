@@ -81,11 +81,9 @@
   padding: 11px 26px;
   background: none;
   color: #000000;
+  margin-right: 12px;
   border: 2px solid $bg-color-button;
   @include transitionX2(border, color);
-  @include tablet {
-    margin-right: 12px;
-  }
   @include desktop {
   font-size: 14px;
   line-height: 1.3;
