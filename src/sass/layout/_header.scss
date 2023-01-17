@@ -60,15 +60,13 @@
   }
 }
 
-
-
 .header-btn {
+  @include font(600, 14, 1.2, 0.04);
   @include centerAlingn;
   padding: 12px 36px;
   height: 42px;
   min-width: 152px;
   text-align: center;
-  @include font(600, 14, 1.2, 0.04);
   color: $primary-text-color;
   fill: $primary-text-color;
   background-color: $bg-color-button;
@@ -89,173 +87,140 @@
   &:disabled {
     background-color: $color-button-disable;
   }
+}
 
+.header-btn {
   @media screen and (max-width: 767px) {
     display: none;
-  }
-}
-// Menu open
-.menu-open {
-  display: block;
-  border: none;
-  background-color: transparent;
-  @include tablet {
-    margin-right: 32px;
-  }
-  @include desktop {
-    display: none;
-    margin-right: 0;
-  }
-}
-
-.menu-open-icon {
-  fill: $inverse-color;
-  &:hover,
-  &:focus {
-    fill: $primary-text-color;
   }
 }
 
 .btn-arrow {
   margin-left: 4px;
 }
-// MOBILE MENU
 
-.mob-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 12px 20px 64px 32px;
-  z-index: 999;
-  width: 100vw;
-  height: 100vh;
-  background: $bg-color-body;
-  overflow: auto;
-  overflow-y: scroll;
-  @include transitionX2(transform, visibility);
-  transform: translateX(0);
+//  M E N U    M O B I L E   //
+.header__menu-button {
+  border: none;
+  margin-left: auto;
+  margin-right: 32px;
+  background-color: transparent;
+  fill: $inverse-color;
+  &:hover,
+  &:focus {
+    fill: $primary-text-color;
+  }
 
-  @include mobile {
-    margin-bottom: 40px;
-    padding: 20px 20px 80px 20px;
+  @media (max-width: 480px) {
+    margin-right: 0px;
   }
-  @include tablet {
-    margin-bottom: 76px;
-    padding: 20px 32px;
-  }
-  @include desktop {
+
+  @media (min-width: 1200px) {
     display: none;
   }
 }
 
-.is-hidden {
-  transform: translateX(100vw);
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.menu-header {
+.btn-burger {
+  @include font(600, 14, 1.2, 0.04);
   @include centerAlingn;
-  justify-content: space-between;
-  margin-bottom: 51px;
-
-  @include mobile {
-    margin-bottom: 40px;
-  }
-  @include tablet {
-    margin-bottom: 76px;
-  }
-}
-
-.menu-close {
-  display: block;
-  border: none;
-  background-color: transparent;
-}
-
-.menu__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-item:not(:last-child) {
-  margin-bottom: 32px;
-
-  @include tablet {
-    margin-bottom: 40px;
-  }
-}
-
-.menu__navigation {
-  display: flex;
-  flex-direction: column;
+  padding: 12px 36px;
+  height: 42px;
+  min-width: 152px;
   text-align: center;
-}
-
-.menu-open-close {
-  fill: $inverse-color;
+  color: $primary-text-color;
+  fill: $primary-text-color;
+  background-color: $bg-color-button;
+  border: none;
+  border-radius: 10px;
+  @include transitionX3(color, background-color, animation);
 
   &:hover {
-    fill: $primary-text-color;
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+  }
+  &:focus {
+    background-color: $bg-green-button;
+    box-shadow: -5px -5px 5px $bg-color-button;
+    color: $inverse-color;
+    fill: $inverse-color;
+  }
+  &:disabled {
+    background-color: $color-button-disable;
+  }
+  @include tablet {
+    display: none;
   }
 }
 
-.menu-list {
-  margin-bottom: 110px;
-  @include mobile {
-    margin-bottom: 114px;
+//  buy nav в навігації
+
+.modal__cross.header__modal-cros {
+  width: 15px;
+  height: 35px;
+}
+
+.header__logo-mobil.header__ise-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.header__mobil-menu.modal {
+  @include font(700, 48, 1.2, null);
+  background-color: $modal-nutrision-linge;
+  transform: translateX(100%);
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 0;
+
+  @media (max-width: 480px) {
+    font-size: 32px;
   }
 }
 
-.menu-link {
-  @include font(700, 32, 1.2, 0.04);
+.header__mobil-menu.modal.active {
+  transform: translateX(0);
+}
+
+.header__mobil-menu-list {
+  padding-top: 76px;
+  @media (max-width: 480px) {
+    @include font(700, 39, 1.2, null);
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+
+  @media (min-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+}
+
+.header__mobil-menu-item {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.header__mobil-menu-item + .header__mobil-menu-item {
+  margin-top: 40px;
+  @media (max-width: 480px) {
+    margin-top: 32px;
+  }
+}
+
+.header__mobil-menu-link {
   text-decoration: none;
-  color: $primary-white-color;
-  @include transition(color);
-
+  color: $inverse-color;
   &:hover,
   &:focus {
     color: $primary-text-color;
   }
-
-  @include tablet {
-    @include font(700, 48, 1.2, 0.04);
-  }
 }
 
-.menu-btn {
-  @include tablet {
-    display: none;
-  }
-  @include centerAlingn;
-  padding: 12px 36px;
-  min-width: 152px;
-  height: 42px;
-  gap: 4px;
-  border: none;
-  color: $primary-text-color;
-  fill: $primary-text-color;
-  background: $bg-color-button;
-  border-radius: 10px;
-
-  @include font(600, 14, 1.2, 0.04);
-  text-align: center;
-  margin: auto;
-  @include transitionX3(color, background-color, fill);
-
-  &:hover {
-    background-color: $bg-green-button;
-  }
-
-  &:focus {
-    background-color: $bg-green-button;
-    color: $inverse-color;
-    fill: $inverse-color;
-  }
-
-  &:disabled {
-    background-color: $color-button-disable;
-  }
-}

@@ -1,31 +1,31 @@
 <header class="header">
   <div class="header__wrapper container">
     <nav class="header__nav">
-  <a href="#" class="header__logo">
-    <picture>
-      <source
-        srcset="
-          ./images/hero-header/logo-desktop.png    1x,
-          ./images/hero-header/logo-desktop-2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="
-          ./images/hero-header/logo-tablet.png    1x,
-          ./images/hero-header/logo-tablet-2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="
-          ./images/hero-header/logo-mob.png    1x,
-          ./images/hero-header/logo-mob-2x.png 2x
-        "
-      />
-      <img src="./images/hero-header/logo-mob.png" alt="логотип" />
-    </picture>
-  </a>
+      <a href="#" class="header__logo">
+        <picture>
+          <source
+            srcset="
+              ./images/hero-header/logo-desktop.png    1x,
+              ./images/hero-header/logo-desktop-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-tablet.png    1x,
+              ./images/hero-header/logo-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-mob.png    1x,
+              ./images/hero-header/logo-mob-2x.png 2x
+            "
+          />
+          <img src="./images/hero-header/logo-mob.png" alt="логотип" />
+        </picture>
+      </a>
 
       <ul class="header__list list">
         <li class="header__block">
@@ -41,62 +41,97 @@
           <a class="header__nav-link link" href="#contacts">Contact</a>
         </li>
       </ul>
-      <button type="button" class="menu-open" data-menu-open>
-        <svg class="menu-open-icon" width="32" height="32">
-            <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
+      <button
+        type="button"
+        class="header__menu-button button__mobil-menu js-open-modal"
+        data-modal="2"
+      >
+        <svg class="header__icon-menu" width="32" height="32">
+          <use href="./images/icons.svg/sprite.svg#icon-btn-mob-menu"></use>
         </svg>
       </button>
-      <button type="button" class="button header-btn js-open-modal" data-modal="5">Buy now 
+      <button
+        type="button"
+        class="button header-btn js-open-modal"
+        data-modal="5"
+      >
+        Buy now
         <svg class="btn-arrow" width="12" height="12">
-        <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
-    </svg></button>
+          <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
+        </svg>
+      </button>
+    </nav>
   </div>
 
-<!--------- mobile menu-------->
+  <!-- mobile menu -->
 
-<div class="mob-menu is-hidden" data-menu>
-  <div class="menu-header">
-    <a href="#">
-              <picture>
-            <source
-              srcset="
-                ./images/hero-header/logo-desktop.png    1x,
-                ./images/hero-header/logo-desktop-2x.png 2x
-              "
-              media="(min-width: 1200px)"
-            />
-            <source
-              srcset="
-                ./images/hero-header/logo-tablet.png    1x,
-                ./images/hero-header/logo-tablet-2x.png 2x
-              "
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="
-                ./images/hero-header/logo-mob.png    1x,
-                ./images/hero-header/logo-mob-2x.png 2x
-              "
-            />
-            <img src="./images/hero-header/logo-mob.png" alt="логотип" />
-          </picture>
+  <div class="header__mobil-menu modal" data-modal="2">
+    <a href="#" class="header__logo-mobil header__ise-logo">
+      <picture>
+        <source
+          srcset="
+            ./images/hero-header/logo-desktop.png    1x,
+            ./images/hero-header/logo-desktop-2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero-header/logo-tablet.png    1x,
+            ./images/hero-header/logo-tablet-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/hero-header/logo-mob.png    1x,
+            ./images/hero-header/logo-mob-2x.png 2x
+          "
+        />
+        <img src="./images/hero-header/logo-mob.png" alt="логотип" />
+      </picture>
     </a>
-    <button type="button" class="menu-close" data-menu-close>
-      <svg class="menu-open-close" width="32" height="32">
-          <use href="./images/icons.svg/sprite.svg#icon-close-line"></use>
+    <!--   Svg иконка для закрытия окна  -->
+    <svg
+      class="modal__cross header__modal-cros js-modal-close"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+      />
+    </svg>
+    <ul class="header__mobil-menu-list">
+      <li class="header__mobil-menu-item">
+        <a class="header__mobil-menu-link js-modal-close" href="./index.html"
+          >Home</a
+        >
+      </li>
+      <li class="header__mobil-menu-item">
+        <a class="header__mobil-menu-link js-modal-close" href="#about"
+          >How it’s made?</a
+        >
+      </li>
+      <li class="header__mobil-menu-item">
+        <a class="header__mobil-menu-link js-modal-close" href="#products"
+          >Our products</a
+        >
+      </li>
+      <li class="header__mobil-menu-item">
+        <a class="header__mobil-menu-link js-modal-close" href="#contact"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="header-btn js-open-modal btn-burger"
+      data-modal="5"
+    >
+      Buy now
+      <svg class="btn-arrow" width="12" height="12">
+        <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
       </svg>
     </button>
   </div>
-  <nav class="menu__navigation">
-    <ul class="menu-list list">
-      <li class="menu-item"><a class="menu-link link" href="#home">Home</a></li>
-      <li class="menu-item"><a class="menu-link link" href="#about">How it’s made?</a></li>
-      <li class="menu-item"><a class="menu-link link" href="#products">Our products</a></li>
-      <li class="menu-item"><a class="menu-link link" href="#contacts">Contact</a></li>
-    </ul>
-  </nav>
-  <button type="button" class="button menu-btn js-open-modal menu-buy" data-modal="5">Buy now 
-    <svg class="btn-arrow" width="12" height="12">
-    <use href="./images/icons.svg/sprite.svg#icon-arrow-right-bold"></use>
-</svg></button>
 </header>
