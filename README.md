@@ -1,6 +1,9 @@
-# Parcel template
+#Presentation: 
 
-Presentation: https://www.canva.com/design/DAFX3WOiOHc/RVWuGUEk04gzFHy-dfpm6w/view?utm_content=DAFX3WOiOHc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Link : https://www.canva.com/design/DAFX3WOiOHc/RVWuGUEk04gzFHy-dfpm6w/view?utm_content=DAFX3WOiOHc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+# Parcel template
 
 Этот проект был создан при помощи Parcel. Для знакомства и настройки
 дополнительных возможностей [обратись к документации](https://parceljs.org/).
