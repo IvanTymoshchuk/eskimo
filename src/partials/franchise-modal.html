@@ -1,6 +1,6 @@
 <!-- Элементы для вызова модальных окон, могут быть любые -->
 
-<div class="modal modal-franchise overlay" data-modal="2">
+<div class="modal modal-franchise overlay" data-modal="6">
   <!--   Svg иконка для закрытия окна  -->
   <svg
     class="modal__cross js-modal-close"
@@ -29,9 +29,11 @@
         <input
           class="form-input__name franshisa-js"
           placeholder="Name"
-          type="text"
+          type="name"
           name="name"
           id="name"
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Name must be two words separated by space."
         />
       </div>
     </div>
@@ -47,7 +49,7 @@
           type="tel"
           name="tel"
           id="tel"
-          pattern="\+3\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+          pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
         />
       </div>
     </div>
